@@ -1,0 +1,66 @@
+===============================================
+  HOW TO GENERATE A JWT TOKEN — SkySoft API
+===============================================
+
+ENDPOINT
+--------
+POST http://localhost:3000/api/v1/auth/login
+
+
+REQUEST HEADERS
+---------------
+Content-Type: application/json
+
+
+REQUEST BODY
+------------
+{
+  "email": "yukesh@skywaycoach.com",
+  "password": "Skyway1!"
+}
+
+
+EXPECTED RESPONSE
+-----------------
+{
+  "success": true,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+
+
+HOW TO USE THE TOKEN
+--------------------
+Copy the token from the response and add it to the
+Authorization header on every protected request:
+
+  Key:   Authorization
+  Value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+
+EXAMPLE PROTECTED REQUEST
+--------------------------
+GET http://localhost:3000/api/v1/protected
+
+Headers:
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+
+TOKEN DETAILS
+-------------
+- Algorithm : HS256
+- Expires   : 1 day (24 hours) from login time
+- Secret    : stored in .env as JWT_SECRET
+- Payload   : { id, email, iat, exp }
+
+
+NOTES
+-----
+- (Auth.js)Token never expires — login again to get a new one    const token = app.jwt.sign(
+      { id: user.id, email: user.email },
+      { expiresIn: "never" }
+    );
+- Never share your token publicly
+- Keep JWT_SECRET in .env and never commit it to Git
+- JWT_SECRET must be a plain string (NOT a token itself)
+
+===============================================

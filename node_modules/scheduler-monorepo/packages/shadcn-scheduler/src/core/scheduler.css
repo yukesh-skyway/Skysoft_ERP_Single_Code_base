@@ -1,0 +1,115 @@
+/* Scheduler Visual Design — keyframes and utility styles */
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.88);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    transform: translateY(4px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Date navigator direction-based slide (use with data-direction="prev"|"next") */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Now-line dot pulse */
+@keyframes nowPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(239, 68, 68, 0);
+  }
+}
+
+/* Status badge pop in */
+@keyframes badgeIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Shift block: resize handles hidden + non-interactive by default, revealed on hover */
+[data-scheduler-block] [data-resize] {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+[data-scheduler-block]:hover [data-resize],
+[data-scheduler-block]:focus-within [data-resize] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Snap line indicator during drag */
+[data-scheduler-snap-line] {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  z-index: 30;
+  background: color-mix(in srgb, var(--primary) 60%, transparent);
+  border-left: 1px dashed var(--primary);
+}
+
+/* Now line dot animation */
+[data-scheduler-now-dot] {
+  animation: nowPulse 2s ease-in-out infinite;
+}
+
+/* High contrast / Windows High Contrast Mode */
+@media (forced-colors: active) {
+  [data-scheduler-block] {
+    outline: 2px solid CanvasText;
+    outline-offset: 1px;
+  }
+  [data-scheduler-block]:focus-visible,
+  [data-scheduler-block][data-focus-visible] {
+    outline: 3px solid Highlight;
+    outline-offset: 2px;
+  }
+  [data-scheduler-resize-handle] {
+    border: 1px solid CanvasText;
+  }
+  [data-scheduler-now-line] {
+    outline: 2px solid CanvasText;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "PowerShell(cd \"c:\\\\Users\\\\skywa\\\\OneDrive\\\\Documents\\\\DevlopmentUAT\\\\DEV - Repo\"; \\(Get-Content package.json | Select-String -Context 0,10 '\"scripts\"'\\).Line; \\(Get-Content package.json\\)[\\(\\(Get-Content package.json | Select-String '\"scripts\"'\\).LineNumber\\)..\\(\\(Get-Content package.json | Select-String '\"scripts\"'\\).LineNumber + 8\\)])"
+    ]
+  }
+}

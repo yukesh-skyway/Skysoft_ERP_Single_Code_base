@@ -1,0 +1,31 @@
+/*
+  Hides the scheduler's built-in internal header
+  (TodayButton + DateNavigator + ViewTabs + Now button row).
+
+  Target is the desktop header div from Scheduler.tsx:
+    <div className="flex flex-col gap-4 border-b border-border bg-background p-4
+                    lg:flex-row lg:items-center lg:justify-between">
+
+  We use the combination of border-b + bg-background + p-4 which is unique
+  to this header div (the draft banner uses bg-accent, the grid uses no p-4).
+*/
+.dispatch-hide-internal-toolbar .bg-background.border-b.p-4 {
+  display: none !important;
+}
+
+/* Mobile header variant — same idea */
+.dispatch-hide-internal-toolbar .bg-background.border-b.p-3 {
+  display: none !important;
+}
+
+/* Ensure the scheduler fills height now that the header is gone */
+.dispatch-hide-internal-toolbar > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide the draft banner ("4 shifts in draft — not visible to staff") */
+.dispatch-hide-internal-toolbar .bg-accent.border-b.px-5 {
+  display: none !important;
+}
