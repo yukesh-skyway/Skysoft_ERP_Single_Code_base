@@ -590,8 +590,13 @@ setSmDates(prev => {
       newErrors.txtKms = 'Please enter valid kilometers after repair';
       hasErrors = true;
     }
+    if (!formData.txtInvoiceAmount || parseFloat(formData.txtInvoiceAmount) <= 0) {
+  newErrors.txtInvoiceAmount = 'Invoice amount is required';
+  hasErrors = true;
+}
     // ← CHANGES 1,2,3,6: Work Order, Payment Method, Invoice Number, Invoice Amount are NOT mandatory
     if (!formData.txtServiceCompletedDate) { newErrors.txtServiceCompletedDate = 'Service completion date is required'; hasErrors = true; }
+    if (!formData.txtInvoiceAmount || parseFloat(formData.txtInvoiceAmount) <= 0) { newErrors.txtInvoiceAmount = 'Invoice amount is required'; hasErrors = true; }
     if (defects.some(defect => !repairStatuses[defect.id])) { newErrors.defectStatuses = 'Please select status for all defects'; hasErrors = true; }
 
     setErrors(newErrors);
@@ -797,7 +802,9 @@ setSmDates(prev => {
 
                 {/* CHANGE 6: Invoice Amount — optional (no asterisk) */}
                 <div>
-                  <label className="text-sm font-medium text-gray-700">Actual Invoice Amount</label>
+                   <label className="text-sm font-medium text-gray-700">
+    Actual Invoice Amount <span className="text-red-500">*</span>
+  </label>
                   <input type="number" step="0.01" value={formData.txtInvoiceAmount}
                     onChange={(e) => { setFormData({ ...formData, txtInvoiceAmount: e.target.value }); if (errors.txtInvoiceAmount) setErrors({ ...errors, txtInvoiceAmount: '' }); }}
                     className={`mt-1 w-full px-3 py-2 border ${errors.txtInvoiceAmount ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 ${errors.txtInvoiceAmount ? 'focus:ring-red-500' : 'focus:ring-blue-500'}`}
