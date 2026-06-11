@@ -1,0 +1,25 @@
+#!/bin/bash
+
+APP_DIR="/home/strategyit/development/vehicle_maintenance_module/api"
+APP_LOG="$APP_DIR/dev-app.log"
+ENV_FILE="$APP_DIR/.env"
+PORT=5002
+
+# Load env vars safely
+if [ -f "$ENV_FILE" ]; then
+    set -o allexport
+    source "$ENV_FILE"
+    set +o allexport
+fi
+
+cd "$APP_DIR" || exit 1
+
+# Check if port is already listening
+if lsof -i :"$PORT" >/dev/null 2>&1; then
+    echo "$(date): DEV already running on port $PORT" >> "$APP_LOG"
+    exit 0
+fi
+
+echo "$(date): Starting DEV Node server on port $PORT..." >> "$APP_LOG"
+nohup node server.js >> "$APP_LOG" 2>&1 &
+

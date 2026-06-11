@@ -1,0 +1,5149 @@
+[2026-03-26T05:19:43.369Z] Garage Module API - RO 2278 and their defects/SMs {"2278":{"defects":["6671"],"sm":[]}} updated successfully
+Skipping - Invalid SM Id and RO id combination. SM 6671 is not assigned to RO 2278
+{
+  "userId": 211,
+  "source": "Garage Webhook",
+  "path": "/updateVehicleDefect_v2",
+  "method": "POST"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+{
+  "2278": [
+    {
+      "repair_log_id": 6671,
+      "scheduled_maintenance_setting_id": null,
+      "rpor_status": "Disengaged",
+      "invoice_status": null,
+      "labor_cost": null,
+      "parts_cost": null,
+      "total_cost": null,
+      "current_kms": "784834.00",
+      "service_completion_date": null,
+      "work_order_number": "WO-2026-021",
+      "work_order_status": "In_Progress",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- New Value ----------------------------------------
+{
+  "2278": [
+    {
+      "repair_log_id": 6671,
+      "scheduled_maintenance_setting_id": null,
+      "rpor_status": "Repair_Started",
+      "invoice_status": null,
+      "labor_cost": null,
+      "parts_cost": null,
+      "total_cost": null,
+      "current_kms": "784834.00",
+      "service_completion_date": null,
+      "work_order_number": "WO-2026-021",
+      "work_order_status": "In_Progress",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+{
+  "roid": 2278,
+  "defectid": "6671",
+  "sm_id": "6671",
+  "work_order_number": "WO-2026-021",
+  "work_order_status": "In_Progress",
+  "completion_date": "",
+  "invoice_status": "",
+  "vehicle_status": "In_Shop",
+  "invoice_number": "",
+  "current_kms": "",
+  "service_completion_date": "",
+  "invoice_amount": "",
+  "invoice_url": "",
+  "defects_details": {
+    "defect_id": "6671",
+    "name": "Coolant replacement",
+    "external_ro_id": 2278,
+    "external_type": "Defect",
+    "external_defect_id": "6671",
+    "description": "Coolant",
+    "created_date": "March 11, 2026",
+    "repair_items": "Diagnostic",
+    "status": "SR_STARTED",
+    "required_parts": "",
+    "sm_id": "6671"
+  },
+  "repair_items": [
+    {
+      "work_order_repair_item_id": 89,
+      "manager_notes": null,
+      "manager_notes_by": null,
+      "manager_notes_at": null,
+      "admin_notes": null,
+      "admin_notes_by": null,
+      "admin_notes_at": null,
+      "rejection_reasons": null,
+      "repair_item_id": 35,
+      "defect_id": "6671",
+      "defect_name": "Coolant replacement",
+      "defect_description": "Coolant",
+      "defect_status": "Completed",
+      "repair_name": "Diagnostic",
+      "description": "Standard Diagnostic",
+      "estimated_hours": 1,
+      "is_scheduled_maintenance": false,
+      "is_custom": true,
+      "status": "Pending",
+      "labor_cost": 45,
+      "work_description": "Standard Diagnostic procedure",
+      "shop_supplies": false,
+      "current_assignment_status": "Completed",
+      "work_orders": {
+        "work_order_id": 23,
+        "work_order_number": "WO-2026-021",
+        "customer_id": 1,
+        "vehicle_id": 1,
+        "visit_id": 3,
+        "ro_id": 2278,
+        "customer_ro_number": "2278",
+        "parent_work_order_number": null,
+        "transferred_at": null,
+        "requested_by": "Esmail",
+        "current_kms": 784834,
+        "status": "In_Progress",
+        "priority": "Medium",
+        "invoice_status": "Not_Invoiced",
+        "estimated_completion": "2026-03-11T12:33:02.000Z",
+        "created_at": "2026-03-11T12:33:00.000Z",
+        "updated_at": "2026-03-11T12:33:00.000Z",
+        "locked_at": "2026-03-26T05:19:39.713Z",
+        "locked_by_user_id": 1,
+        "deleted": false,
+        "vehicle_status": "In_Shop",
+        "stop_reason": null,
+        "current_kms_history": [
+          {
+            "kms": 784834,
+            "createdAt": "2026-03-11T12:32:59.660Z",
+            "defect_id": 81,
+            "current_kms": 784834,
+            "defect_name": "Coolant replacement"
+          },
+          {
+            "kms": 784834,
+            "createdAt": "2026-03-11T12:40:14.259Z",
+            "defect_id": 81,
+            "repair_id": 89,
+            "defect_name": "Coolant replacement",
+            "mechanic_id": 2,
+            "repair_name": "Diagnostic",
+            "mechanic_name": "James"
+          },
+          {
+            "kms": 784834,
+            "createdAt": "2026-03-11T12:40:14.279Z",
+            "defect_id": 81,
+            "repair_id": 89,
+            "defect_name": "Coolant replacement",
+            "mechanic_id": 2,
+            "repair_name": "Diagnostic",
+            "mechanic_name": "James"
+          }
+        ],
+        "is_quick_job": false,
+        "customers": {
+          "customer_id": 1,
+          "name": "Skyway Coach Lines",
+          "contact_person": "Mohamed Esmail",
+          "email": "mel@dev.vto.group",
+          "phone": "(786) 392-0348",
+          "address": "2839 Saint Rose Parkway",
+          "city": "Coachella",
+          "state": "New York",
+          "postal_code": "64733940",
+          "created_at": "2026-02-13T05:04:45.000Z",
+          "updated_at": "2026-02-13T05:04:45.000Z",
+          "contact_phone": "",
+          "contact_email": "",
+          "ar_contact": "",
+          "ar_phone": "",
+          "ar_email": "",
+          "due_days": 45,
+          "external_id": null
+        },
+        "vehicles": {
+          "vehicle_id": 1,
+          "customer_id": 1,
+          "vehicle_type_id": 1,
+          "year": 2006,
+          "make": "PREVOST",
+          "model": "H3 Coach",
+          "trim": "46382",
+          "vin": "2PCH3349X61010312",
+          "unit_number": "9622",
+          "status": "In_Service",
+          "created_at": "2026-02-13T05:07:51.000Z",
+          "updated_at": "2026-02-13T05:07:51.000Z",
+          "verified": true
+        },
+        "invoices": [],
+        "defects": [
+          {
+            "defect_id": 83,
+            "work_order_id": 23,
+            "vehicle_id": 1,
+            "name": "Change the chain sprocket",
+            "description": "Change the chain sprocket",
+            "status": "In_Progress",
+            "disengage_reason": null,
+            "disengage_notes": null,
+            "disengaged_at": null,
+            "created_at": "2026-03-11T15:31:16.000Z",
+            "updated_at": "2026-03-11T15:31:16.000Z",
+            "external_ro_id": null,
+            "external_defect_id": null,
+            "external_type": null
+          },
+          {
+            "defect_id": 81,
+            "work_order_id": 23,
+            "vehicle_id": 1,
+            "name": "Coolant replacement",
+            "description": "Coolant",
+            "status": "Completed",
+            "disengage_reason": "Pending_Parts",
+            "disengage_notes": "Parts will take time to come",
+            "disengaged_at": "2026-03-11T12:42:50.000Z",
+            "created_at": "2026-03-11T12:33:00.000Z",
+            "updated_at": "2026-03-11T12:42:50.000Z",
+            "external_ro_id": 2278,
+            "external_defect_id": "6671",
+            "external_type": "Defect"
+          }
+        ],
+        "work_order_repair_items": [
+          {
+            "work_order_repair_item_id": 89,
+            "rejection_reasons": null,
+            "work_order_id": 23,
+            "repair_item_id": 35,
+            "defect_id": 81,
+            "created_at": "2026-03-11T12:39:23.000Z",
+            "updated_at": "2026-03-11T12:39:23.000Z",
+            "status": "Pending",
+            "rejection_reason": null,
+            "admin_notes": null,
+            "admin_notes_by": null,
+            "admin_notes_at": null,
+            "manager_notes": null,
+            "manager_notes_by": null,
+            "manager_notes_at": null,
+            "shop_supplies": false,
+            "repair_items": {
+              "repair_item_id": 35,
+              "name": "Diagnostic",
+              "description": "Standard Diagnostic",
+              "estimated_hours": "1",
+              "labor_cost": "0",
+              "has_parts": false,
+              "work_description": "Standard Diagnostic procedure",
+              "total_estimated_cost": "0",
+              "is_active": true,
+              "is_custom": true,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "fixed_amount": null,
+              "is_scheduled_maintenance": false,
+              "repair_item_parts": []
+            },
+            "defects": {
+              "defect_id": 81,
+              "work_order_id": 23,
+              "vehicle_id": 1,
+              "name": "Coolant replacement",
+              "description": "Coolant",
+              "status": "Completed",
+              "disengage_reason": "Pending_Parts",
+              "disengage_notes": "Parts will take time to come",
+              "disengaged_at": "2026-03-11T12:42:50.000Z",
+              "created_at": "2026-03-11T12:33:00.000Z",
+              "updated_at": "2026-03-11T12:42:50.000Z",
+              "external_ro_id": 2278,
+              "external_defect_id": "6671",
+              "external_type": "Defect"
+            },
+            "mechanic_assignments": [
+              {
+                "assignment_id": 89,
+                "work_order_repair_item_id": 89,
+                "defect_id": null,
+                "mechanic_id": 2,
+                "bay_id": 2,
+                "start_datetime": "2026-03-11T02:45:00.000Z",
+                "end_datetime": "2026-03-11T03:45:00.000Z",
+                "actual_start_datetime": "2026-03-11T12:40:14.000Z",
+                "actual_end_datetime": "2026-03-26T05:19:43.000Z",
+                "status": "Completed",
+                "notes": null,
+                "created_at": "2026-03-11T12:39:35.000Z",
+                "updated_at": "2026-03-11T12:39:35.000Z",
+                "reject_reason": null,
+                "approval_status": "Not_Submitted",
+                "hours": "0",
+                "invoice_notes": null,
+                "mechanic_challenge_notes": null,
+                "pause_time": null,
+                "paused_time": "2026-03-11T12:43:15.000Z",
+                "actual_hours": "0.05",
+                "assignment_history": [
+                  {
+                    "end": "2026-03-11T12:43:15.223Z",
+                    "start": "2026-03-11T12:40:14.328Z"
+                  }
+                ],
+                "is_completed": true,
+                "time_tracking_history": [
+                  {
+                    "time": "2026-03-11T12:40:14.328Z",
+                    "status": "Started"
+                  },
+                  {
+                    "time": "2026-03-11T12:43:15.223Z",
+                    "status": "Paused"
+                  },
+                  {
+                    "time": "2026-03-26T05:19:42.752Z",
+                    "status": "Completed"
+                  }
+                ],
+                "approval_timestamp": null,
+                "mechanics": {
+                  "mechanic_id": 2,
+                  "name": "James",
+                  "employee_id": "EM001",
+                  "contact_number": "(978) 658-9769",
+                  "efficiency_rating": "100",
+                  "status": "Available",
+                  "qr_code_path": null,
+                  "user_id": 4,
+                  "created_at": "2026-02-13T05:54:43.000Z",
+                  "updated_at": "2026-02-13T05:54:43.000Z",
+                  "type": "Mechanic"
+                },
+                "repair_bays": {
+                  "bay_id": 2,
+                  "bay_number": "2",
+                  "bay_name": "BAY 2",
+                  "description": "",
+                  "status": "Available",
+                  "created_at": "2026-02-13T07:10:30.000Z",
+                  "updated_at": "2026-02-13T07:10:30.000Z"
+                }
+              }
+            ],
+            "repair_item_notes": []
+          },
+          {
+            "work_order_repair_item_id": 90,
+            "rejection_reasons": null,
+            "work_order_id": 23,
+            "repair_item_id": 34,
+            "defect_id": 83,
+            "created_at": "2026-03-11T15:31:16.000Z",
+            "updated_at": "2026-03-11T15:31:16.000Z",
+            "status": "Pending",
+            "rejection_reason": null,
+            "admin_notes": null,
+            "admin_notes_by": null,
+            "admin_notes_at": null,
+            "manager_notes": null,
+            "manager_notes_by": null,
+            "manager_notes_at": null,
+            "shop_supplies": false,
+            "repair_items": {
+              "repair_item_id": 34,
+              "name": "Engine Rebuild",
+              "description": "The entire engine needs to be replaced",
+              "estimated_hours": "40",
+              "labor_cost": "0",
+              "has_parts": false,
+              "work_description": "The entire engine needs to be replaced",
+              "total_estimated_cost": "0",
+              "is_active": true,
+              "is_custom": false,
+              "created_at": "2026-03-10T08:15:26.000Z",
+              "updated_at": "2026-03-10T08:15:26.000Z",
+              "fixed_amount": null,
+              "is_scheduled_maintenance": false,
+              "repair_item_parts": []
+            },
+            "defects": {
+              "defect_id": 83,
+              "work_order_id": 23,
+              "vehicle_id": 1,
+              "name": "Change the chain sprocket",
+              "description": "Change the chain sprocket",
+              "status": "In_Progress",
+              "disengage_reason": null,
+              "disengage_notes": null,
+              "disengaged_at": null,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "external_ro_id": null,
+              "external_defect_id": null,
+              "external_type": null
+            },
+            "mechanic_assignments": [
+              {
+                "assignment_id": 90,
+                "work_order_repair_item_id": 90,
+                "defect_id": null,
+                "mechanic_id": 2,
+                "bay_id": 2,
+                "start_datetime": "2026-03-12T09:30:00.000Z",
+                "end_datetime": "2026-03-18T15:29:00.000Z",
+                "actual_start_datetime": "2026-03-11T15:31:00.000Z",
+                "actual_end_datetime": null,
+                "status": "Paused",
+                "notes": null,
+                "created_at": "2026-03-11T15:31:16.000Z",
+                "updated_at": "2026-03-11T15:31:16.000Z",
+                "reject_reason": null,
+                "approval_status": "Not_Submitted",
+                "hours": "0",
+                "invoice_notes": null,
+                "mechanic_challenge_notes": null,
+                "pause_time": null,
+                "paused_time": "2026-03-12T11:03:31.000Z",
+                "actual_hours": null,
+                "assignment_history": [
+                  {
+                    "end": "2026-03-12T11:03:31.401Z",
+                    "start": "2026-03-11T15:31:00.000Z"
+                  }
+                ],
+                "is_completed": false,
+                "time_tracking_history": [
+                  {
+                    "time": "2026-03-11T15:31:00.000Z",
+                    "status": "Started"
+                  },
+                  {
+                    "time": "2026-03-12T11:03:31.401Z",
+                    "status": "Paused"
+                  }
+                ],
+                "approval_timestamp": null,
+                "mechanics": {
+                  "mechanic_id": 2,
+                  "name": "James",
+                  "employee_id": "EM001",
+                  "contact_number": "(978) 658-9769",
+                  "efficiency_rating": "100",
+                  "status": "Available",
+                  "qr_code_path": null,
+                  "user_id": 4,
+                  "created_at": "2026-02-13T05:54:43.000Z",
+                  "updated_at": "2026-02-13T05:54:43.000Z",
+                  "type": "Mechanic"
+                },
+                "repair_bays": {
+                  "bay_id": 2,
+                  "bay_number": "2",
+                  "bay_name": "BAY 2",
+                  "description": "",
+                  "status": "Available",
+                  "created_at": "2026-02-13T07:10:30.000Z",
+                  "updated_at": "2026-02-13T07:10:30.000Z"
+                }
+              }
+            ],
+            "repair_item_notes": []
+          }
+        ],
+        "work_order_parts_used": [
+          {
+            "work_order_parts_used_id": 149,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVN2K3YR540EMBS421YH",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "96.6",
+            "total_price": "193.2",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-11T14:38:53.000Z",
+            "updated_at": "2026-03-11T14:38:53.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 151,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVEZ7ZNSAQGAGXSA9E8F",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "150.91",
+            "total_price": "301.82",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-11T14:42:04.000Z",
+            "updated_at": "2026-03-11T14:42:04.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 195,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 90,
+            "defect_id": null,
+            "inventory_id": "01KMM89JNMDYJMKK69R1V0FQ9F",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Approved",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": "2026-03-26T05:10:21.000Z",
+            "rejection_reason": null,
+            "created_at": "2026-03-26T04:50:15.000Z",
+            "updated_at": "2026-03-26T04:50:15.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": "Halt Panel Engine block",
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 90,
+              "work_order_id": 23,
+              "repair_item_id": 34,
+              "defect_id": 83,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": true,
+              "repair_items": {
+                "repair_item_id": 34,
+                "name": "Engine Rebuild",
+                "description": "The entire engine needs to be replaced",
+                "estimated_hours": "40",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "The entire engine needs to be replaced",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-03-10T08:15:26.000Z",
+                "updated_at": "2026-03-10T08:15:26.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 196,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 90,
+            "defect_id": null,
+            "inventory_id": "01KMM889M4BHP1860VPZEZH2ZA",
+            "quantity": "3",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Approved",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": "2026-03-26T05:11:56.000Z",
+            "rejection_reason": null,
+            "created_at": "2026-03-26T04:50:40.000Z",
+            "updated_at": "2026-03-26T04:50:40.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": "Chevy Side mirror",
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 90,
+              "work_order_id": 23,
+              "repair_item_id": 34,
+              "defect_id": 83,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": true,
+              "repair_items": {
+                "repair_item_id": 34,
+                "name": "Engine Rebuild",
+                "description": "The entire engine needs to be replaced",
+                "estimated_hours": "40",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "The entire engine needs to be replaced",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-03-10T08:15:26.000Z",
+                "updated_at": "2026-03-10T08:15:26.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 197,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 90,
+            "defect_id": null,
+            "inventory_id": "01KMM7SP08R8NVGYN4FGVHVF6S",
+            "quantity": "3",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Approved",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": "2026-03-26T04:53:52.000Z",
+            "rejection_reason": null,
+            "created_at": "2026-03-26T04:51:05.000Z",
+            "updated_at": "2026-03-26T04:51:05.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": "793G93",
+            "type": "non_inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 90,
+              "work_order_id": 23,
+              "repair_item_id": 34,
+              "defect_id": 83,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": true,
+              "repair_items": {
+                "repair_item_id": 34,
+                "name": "Engine Rebuild",
+                "description": "The entire engine needs to be replaced",
+                "estimated_hours": "40",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "The entire engine needs to be replaced",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-03-10T08:15:26.000Z",
+                "updated_at": "2026-03-10T08:15:26.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 148,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVN2K3YR540EMBS421YH",
+            "quantity": "0",
+            "serial_number": null,
+            "unit_price": "96.6",
+            "total_price": "0",
+            "status": "Rejected",
+            "notes": " (Stock deficit: Moved to Pending Approval)",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": "no need",
+            "created_at": "2026-03-11T14:38:53.000Z",
+            "updated_at": "2026-03-11T14:38:53.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 150,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVEZ7ZNSAQGAGXSA9E8F",
+            "quantity": "0",
+            "serial_number": null,
+            "unit_price": "150.91",
+            "total_price": "0",
+            "status": "Rejected",
+            "notes": " (Stock deficit: Moved to Pending Approval)",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": "No need",
+            "created_at": "2026-03-11T14:42:04.000Z",
+            "updated_at": "2026-03-11T14:42:04.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 198,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01KMM8GP76BR16ZR7J8B76ZKKX",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Parts_On_Order",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-26T05:04:41.000Z",
+            "updated_at": "2026-03-26T05:04:41.000Z",
+            "non_inventory_part_description": "Kisson Clutch Plate",
+            "non_inventory_part_name": "783840",
+            "type": "non_inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          }
+        ]
+      },
+      "total_actual_hours": 352.65,
+      "mechanic_assignments": [
+        {
+          "assignment_id": 89,
+          "work_order_repair_item_id": 89,
+          "defect_id": null,
+          "mechanic_id": 2,
+          "bay_id": 2,
+          "start_datetime": "2026-03-11T02:45:00.000Z",
+          "end_datetime": "2026-03-11T03:45:00.000Z",
+          "actual_start_datetime": "2026-03-11T12:40:14.000Z",
+          "actual_end_datetime": "2026-03-26T05:19:43.000Z",
+          "status": "Completed",
+          "notes": null,
+          "created_at": "2026-03-11T12:39:35.000Z",
+          "updated_at": "2026-03-11T12:39:35.000Z",
+          "reject_reason": null,
+          "approval_status": "Not_Submitted",
+          "hours": "0",
+          "invoice_notes": null,
+          "mechanic_challenge_notes": null,
+          "pause_time": null,
+          "paused_time": "2026-03-11T12:43:15.000Z",
+          "actual_hours": "0.05",
+          "assignment_history": [
+            {
+              "end": "2026-03-11T12:43:15.223Z",
+              "start": "2026-03-11T12:40:14.328Z"
+            }
+          ],
+          "is_completed": true,
+          "time_tracking_history": [
+            {
+              "time": "2026-03-11T12:40:14.328Z",
+              "status": "Started"
+            },
+            {
+              "time": "2026-03-11T12:43:15.223Z",
+              "status": "Paused"
+            },
+            {
+              "time": "2026-03-26T05:19:42.752Z",
+              "status": "Completed"
+            }
+          ],
+          "approval_timestamp": null
+        }
+      ],
+      "required_parts": "",
+      "repair_item_parts": [],
+      "notes": [],
+      "total_estimated_cost": 0,
+      "sm_id": "6671"
+    }
+  ]
+}
+================================================================================
+[2026-03-26T05:20:13.920Z] Garage Module API - RO 2278 and their defects/SMs {"2278":{"defects":["6671"],"sm":[]}} updated successfully
+Skipping - Invalid SM Id and RO id combination. SM 6671 is not assigned to RO 2278
+{
+  "userId": 211,
+  "source": "Garage Webhook",
+  "path": "/updateVehicleDefect_v2",
+  "method": "POST"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+{
+  "2278": [
+    {
+      "repair_log_id": 6671,
+      "scheduled_maintenance_setting_id": null,
+      "rpor_status": "Repair_Started",
+      "invoice_status": null,
+      "labor_cost": null,
+      "parts_cost": null,
+      "total_cost": null,
+      "current_kms": "784834.00",
+      "service_completion_date": null,
+      "work_order_number": "WO-2026-021",
+      "work_order_status": "In_Progress",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- New Value ----------------------------------------
+{
+  "2278": [
+    {
+      "repair_log_id": 6671,
+      "scheduled_maintenance_setting_id": null,
+      "rpor_status": "Completed",
+      "invoice_status": null,
+      "labor_cost": "2.25",
+      "parts_cost": "495.02",
+      "total_cost": "497.27",
+      "current_kms": "784834.00",
+      "service_completion_date": "2026-03-26T04:00:00.000Z",
+      "work_order_number": "WO-2026-021",
+      "work_order_status": "Completed",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+{
+  "roid": 2278,
+  "defectid": "6671",
+  "sm_id": "6671",
+  "work_order_number": "WO-2026-021",
+  "work_order_status": "Completed",
+  "completion_date": "2026-03-26T05:20:13.000Z",
+  "invoice_status": "",
+  "vehicle_status": "",
+  "invoice_number": "",
+  "current_kms": 784834,
+  "service_completion_date": "2026-03-26T05:20:13.000Z",
+  "invoice_amount": "",
+  "invoice_url": "",
+  "defects_details": {
+    "defect_id": "6671",
+    "name": "Coolant replacement",
+    "external_ro_id": 2278,
+    "external_type": "Defect",
+    "external_defect_id": "6671",
+    "description": "Coolant",
+    "created_date": "March 11, 2026",
+    "repair_items": "Diagnostic",
+    "status": "Completed",
+    "required_parts": "",
+    "labor_cost": 2.25,
+    "parts_cost": 495.02,
+    "total_cost": 497.27,
+    "completion_date": "2026-03-26T05:20:13.000Z",
+    "approved_by": "Esmail",
+    "service_completion_date": "2026-03-26T05:20:13.000Z",
+    "sm_id": "6671",
+    "current_kms": 784834
+  },
+  "repair_items": [
+    {
+      "work_order_repair_item_id": 89,
+      "manager_notes": null,
+      "manager_notes_by": null,
+      "manager_notes_at": null,
+      "admin_notes": null,
+      "admin_notes_by": null,
+      "admin_notes_at": null,
+      "rejection_reasons": null,
+      "repair_item_id": 35,
+      "defect_id": "6671",
+      "defect_name": "Coolant replacement",
+      "defect_description": "Coolant",
+      "defect_status": "Approved",
+      "repair_name": "Diagnostic",
+      "description": "Standard Diagnostic",
+      "estimated_hours": 1,
+      "is_scheduled_maintenance": false,
+      "is_custom": true,
+      "status": "Pending",
+      "labor_cost": 45,
+      "work_description": "Standard Diagnostic procedure",
+      "shop_supplies": false,
+      "current_assignment_status": "Completed",
+      "work_orders": {
+        "work_order_id": 23,
+        "work_order_number": "WO-2026-021",
+        "customer_id": 1,
+        "vehicle_id": 1,
+        "visit_id": 3,
+        "ro_id": 2278,
+        "customer_ro_number": "2278",
+        "parent_work_order_number": null,
+        "transferred_at": null,
+        "requested_by": "Esmail",
+        "current_kms": 784834,
+        "status": "Completed",
+        "priority": "Medium",
+        "invoice_status": "Not_Invoiced",
+        "estimated_completion": "2026-03-11T12:33:02.000Z",
+        "created_at": "2026-03-11T12:33:00.000Z",
+        "updated_at": "2026-03-11T12:33:00.000Z",
+        "locked_at": "2026-03-26T05:19:55.152Z",
+        "locked_by_user_id": 1,
+        "deleted": false,
+        "vehicle_status": "In_Shop",
+        "stop_reason": null,
+        "current_kms_history": [
+          {
+            "kms": 784834,
+            "createdAt": "2026-03-11T12:32:59.660Z",
+            "defect_id": 81,
+            "current_kms": 784834,
+            "defect_name": "Coolant replacement"
+          },
+          {
+            "kms": 784834,
+            "createdAt": "2026-03-11T12:40:14.259Z",
+            "defect_id": 81,
+            "repair_id": 89,
+            "defect_name": "Coolant replacement",
+            "mechanic_id": 2,
+            "repair_name": "Diagnostic",
+            "mechanic_name": "James"
+          },
+          {
+            "kms": 784834,
+            "createdAt": "2026-03-11T12:40:14.279Z",
+            "defect_id": 81,
+            "repair_id": 89,
+            "defect_name": "Coolant replacement",
+            "mechanic_id": 2,
+            "repair_name": "Diagnostic",
+            "mechanic_name": "James"
+          }
+        ],
+        "is_quick_job": false,
+        "customers": {
+          "customer_id": 1,
+          "name": "Skyway Coach Lines",
+          "contact_person": "Mohamed Esmail",
+          "email": "mel@dev.vto.group",
+          "phone": "(786) 392-0348",
+          "address": "2839 Saint Rose Parkway",
+          "city": "Coachella",
+          "state": "New York",
+          "postal_code": "64733940",
+          "created_at": "2026-02-13T05:04:45.000Z",
+          "updated_at": "2026-02-13T05:04:45.000Z",
+          "contact_phone": "",
+          "contact_email": "",
+          "ar_contact": "",
+          "ar_phone": "",
+          "ar_email": "",
+          "due_days": 45,
+          "external_id": null
+        },
+        "vehicles": {
+          "vehicle_id": 1,
+          "customer_id": 1,
+          "vehicle_type_id": 1,
+          "year": 2006,
+          "make": "PREVOST",
+          "model": "H3 Coach",
+          "trim": "46382",
+          "vin": "2PCH3349X61010312",
+          "unit_number": "9622",
+          "status": "In_Service",
+          "created_at": "2026-02-13T05:07:51.000Z",
+          "updated_at": "2026-02-13T05:07:51.000Z",
+          "verified": true
+        },
+        "invoices": [],
+        "defects": [
+          {
+            "defect_id": 83,
+            "work_order_id": 23,
+            "vehicle_id": 1,
+            "name": "Change the chain sprocket",
+            "description": "Change the chain sprocket",
+            "status": "Completed",
+            "disengage_reason": null,
+            "disengage_notes": null,
+            "disengaged_at": null,
+            "created_at": "2026-03-11T15:31:16.000Z",
+            "updated_at": "2026-03-11T15:31:16.000Z",
+            "external_ro_id": null,
+            "external_defect_id": null,
+            "external_type": null
+          },
+          {
+            "defect_id": 81,
+            "work_order_id": 23,
+            "vehicle_id": 1,
+            "name": "Coolant replacement",
+            "description": "Coolant",
+            "status": "Approved",
+            "disengage_reason": "Pending_Parts",
+            "disengage_notes": "Parts will take time to come",
+            "disengaged_at": "2026-03-11T12:42:50.000Z",
+            "created_at": "2026-03-11T12:33:00.000Z",
+            "updated_at": "2026-03-11T12:42:50.000Z",
+            "external_ro_id": 2278,
+            "external_defect_id": "6671",
+            "external_type": "Defect"
+          }
+        ],
+        "work_order_repair_items": [
+          {
+            "work_order_repair_item_id": 89,
+            "rejection_reasons": null,
+            "work_order_id": 23,
+            "repair_item_id": 35,
+            "defect_id": 81,
+            "created_at": "2026-03-11T12:39:23.000Z",
+            "updated_at": "2026-03-11T12:39:23.000Z",
+            "status": "Pending",
+            "rejection_reason": null,
+            "admin_notes": null,
+            "admin_notes_by": null,
+            "admin_notes_at": null,
+            "manager_notes": null,
+            "manager_notes_by": null,
+            "manager_notes_at": null,
+            "shop_supplies": false,
+            "repair_items": {
+              "repair_item_id": 35,
+              "name": "Diagnostic",
+              "description": "Standard Diagnostic",
+              "estimated_hours": "1",
+              "labor_cost": "0",
+              "has_parts": false,
+              "work_description": "Standard Diagnostic procedure",
+              "total_estimated_cost": "0",
+              "is_active": true,
+              "is_custom": true,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "fixed_amount": null,
+              "is_scheduled_maintenance": false,
+              "repair_item_parts": []
+            },
+            "defects": {
+              "defect_id": 81,
+              "work_order_id": 23,
+              "vehicle_id": 1,
+              "name": "Coolant replacement",
+              "description": "Coolant",
+              "status": "Approved",
+              "disengage_reason": "Pending_Parts",
+              "disengage_notes": "Parts will take time to come",
+              "disengaged_at": "2026-03-11T12:42:50.000Z",
+              "created_at": "2026-03-11T12:33:00.000Z",
+              "updated_at": "2026-03-11T12:42:50.000Z",
+              "external_ro_id": 2278,
+              "external_defect_id": "6671",
+              "external_type": "Defect"
+            },
+            "mechanic_assignments": [
+              {
+                "assignment_id": 89,
+                "work_order_repair_item_id": 89,
+                "defect_id": null,
+                "mechanic_id": 2,
+                "bay_id": 2,
+                "start_datetime": "2026-03-11T02:45:00.000Z",
+                "end_datetime": "2026-03-11T03:45:00.000Z",
+                "actual_start_datetime": "2026-03-11T12:40:14.000Z",
+                "actual_end_datetime": "2026-03-26T05:19:43.000Z",
+                "status": "Completed",
+                "notes": null,
+                "created_at": "2026-03-11T12:39:35.000Z",
+                "updated_at": "2026-03-11T12:39:35.000Z",
+                "reject_reason": null,
+                "approval_status": "Approved",
+                "hours": "0",
+                "invoice_notes": null,
+                "mechanic_challenge_notes": null,
+                "pause_time": null,
+                "paused_time": "2026-03-11T12:43:15.000Z",
+                "actual_hours": "0.05",
+                "assignment_history": [
+                  {
+                    "end": "2026-03-11T12:43:15.223Z",
+                    "start": "2026-03-11T12:40:14.328Z"
+                  }
+                ],
+                "is_completed": true,
+                "time_tracking_history": [
+                  {
+                    "time": "2026-03-11T12:40:14.328Z",
+                    "status": "Started"
+                  },
+                  {
+                    "time": "2026-03-11T12:43:15.223Z",
+                    "status": "Paused"
+                  },
+                  {
+                    "time": "2026-03-26T05:19:42.752Z",
+                    "status": "Completed"
+                  }
+                ],
+                "approval_timestamp": "2026-03-26T05:20:13.000Z",
+                "mechanics": {
+                  "mechanic_id": 2,
+                  "name": "James",
+                  "employee_id": "EM001",
+                  "contact_number": "(978) 658-9769",
+                  "efficiency_rating": "100",
+                  "status": "Available",
+                  "qr_code_path": null,
+                  "user_id": 4,
+                  "created_at": "2026-02-13T05:54:43.000Z",
+                  "updated_at": "2026-02-13T05:54:43.000Z",
+                  "type": "Mechanic"
+                },
+                "repair_bays": {
+                  "bay_id": 2,
+                  "bay_number": "2",
+                  "bay_name": "BAY 2",
+                  "description": "",
+                  "status": "Available",
+                  "created_at": "2026-02-13T07:10:30.000Z",
+                  "updated_at": "2026-02-13T07:10:30.000Z"
+                }
+              }
+            ],
+            "repair_item_notes": []
+          },
+          {
+            "work_order_repair_item_id": 90,
+            "rejection_reasons": null,
+            "work_order_id": 23,
+            "repair_item_id": 34,
+            "defect_id": 83,
+            "created_at": "2026-03-11T15:31:16.000Z",
+            "updated_at": "2026-03-11T15:31:16.000Z",
+            "status": "Pending",
+            "rejection_reason": null,
+            "admin_notes": null,
+            "admin_notes_by": null,
+            "admin_notes_at": null,
+            "manager_notes": null,
+            "manager_notes_by": null,
+            "manager_notes_at": null,
+            "shop_supplies": false,
+            "repair_items": {
+              "repair_item_id": 34,
+              "name": "Engine Rebuild",
+              "description": "The entire engine needs to be replaced",
+              "estimated_hours": "40",
+              "labor_cost": "0",
+              "has_parts": false,
+              "work_description": "The entire engine needs to be replaced",
+              "total_estimated_cost": "0",
+              "is_active": true,
+              "is_custom": false,
+              "created_at": "2026-03-10T08:15:26.000Z",
+              "updated_at": "2026-03-10T08:15:26.000Z",
+              "fixed_amount": null,
+              "is_scheduled_maintenance": false,
+              "repair_item_parts": []
+            },
+            "defects": {
+              "defect_id": 83,
+              "work_order_id": 23,
+              "vehicle_id": 1,
+              "name": "Change the chain sprocket",
+              "description": "Change the chain sprocket",
+              "status": "Completed",
+              "disengage_reason": null,
+              "disengage_notes": null,
+              "disengaged_at": null,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "external_ro_id": null,
+              "external_defect_id": null,
+              "external_type": null
+            },
+            "mechanic_assignments": [
+              {
+                "assignment_id": 90,
+                "work_order_repair_item_id": 90,
+                "defect_id": null,
+                "mechanic_id": 2,
+                "bay_id": 2,
+                "start_datetime": "2026-03-12T09:30:00.000Z",
+                "end_datetime": "2026-03-18T15:29:00.000Z",
+                "actual_start_datetime": "2026-03-11T15:31:00.000Z",
+                "actual_end_datetime": "2026-03-26T05:19:52.000Z",
+                "status": "Completed",
+                "notes": null,
+                "created_at": "2026-03-11T15:31:16.000Z",
+                "updated_at": "2026-03-11T15:31:16.000Z",
+                "reject_reason": null,
+                "approval_status": "Not_Submitted",
+                "hours": "0",
+                "invoice_notes": null,
+                "mechanic_challenge_notes": null,
+                "pause_time": null,
+                "paused_time": "2026-03-12T11:03:31.000Z",
+                "actual_hours": "19.53",
+                "assignment_history": [
+                  {
+                    "end": "2026-03-12T11:03:31.401Z",
+                    "start": "2026-03-11T15:31:00.000Z"
+                  }
+                ],
+                "is_completed": true,
+                "time_tracking_history": [
+                  {
+                    "time": "2026-03-11T15:31:00.000Z",
+                    "status": "Started"
+                  },
+                  {
+                    "time": "2026-03-12T11:03:31.401Z",
+                    "status": "Paused"
+                  },
+                  {
+                    "time": "2026-03-26T05:19:52.306Z",
+                    "status": "Completed"
+                  }
+                ],
+                "approval_timestamp": null,
+                "mechanics": {
+                  "mechanic_id": 2,
+                  "name": "James",
+                  "employee_id": "EM001",
+                  "contact_number": "(978) 658-9769",
+                  "efficiency_rating": "100",
+                  "status": "Available",
+                  "qr_code_path": null,
+                  "user_id": 4,
+                  "created_at": "2026-02-13T05:54:43.000Z",
+                  "updated_at": "2026-02-13T05:54:43.000Z",
+                  "type": "Mechanic"
+                },
+                "repair_bays": {
+                  "bay_id": 2,
+                  "bay_number": "2",
+                  "bay_name": "BAY 2",
+                  "description": "",
+                  "status": "Available",
+                  "created_at": "2026-02-13T07:10:30.000Z",
+                  "updated_at": "2026-02-13T07:10:30.000Z"
+                }
+              }
+            ],
+            "repair_item_notes": []
+          }
+        ],
+        "work_order_parts_used": [
+          {
+            "work_order_parts_used_id": 149,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVN2K3YR540EMBS421YH",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "96.6",
+            "total_price": "193.2",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-11T14:38:53.000Z",
+            "updated_at": "2026-03-11T14:38:53.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 151,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVEZ7ZNSAQGAGXSA9E8F",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "150.91",
+            "total_price": "301.82",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-11T14:42:04.000Z",
+            "updated_at": "2026-03-11T14:42:04.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 195,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 90,
+            "defect_id": null,
+            "inventory_id": "01KMM89JNMDYJMKK69R1V0FQ9F",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": "2026-03-26T05:10:21.000Z",
+            "rejection_reason": null,
+            "created_at": "2026-03-26T04:50:15.000Z",
+            "updated_at": "2026-03-26T04:50:15.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": "Halt Panel Engine block",
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 90,
+              "work_order_id": 23,
+              "repair_item_id": 34,
+              "defect_id": 83,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": true,
+              "repair_items": {
+                "repair_item_id": 34,
+                "name": "Engine Rebuild",
+                "description": "The entire engine needs to be replaced",
+                "estimated_hours": "40",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "The entire engine needs to be replaced",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-03-10T08:15:26.000Z",
+                "updated_at": "2026-03-10T08:15:26.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 196,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 90,
+            "defect_id": null,
+            "inventory_id": "01KMM889M4BHP1860VPZEZH2ZA",
+            "quantity": "3",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": "2026-03-26T05:11:56.000Z",
+            "rejection_reason": null,
+            "created_at": "2026-03-26T04:50:40.000Z",
+            "updated_at": "2026-03-26T04:50:40.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": "Chevy Side mirror",
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 90,
+              "work_order_id": 23,
+              "repair_item_id": 34,
+              "defect_id": 83,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": true,
+              "repair_items": {
+                "repair_item_id": 34,
+                "name": "Engine Rebuild",
+                "description": "The entire engine needs to be replaced",
+                "estimated_hours": "40",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "The entire engine needs to be replaced",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-03-10T08:15:26.000Z",
+                "updated_at": "2026-03-10T08:15:26.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 197,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 90,
+            "defect_id": null,
+            "inventory_id": "01KMM7SP08R8NVGYN4FGVHVF6S",
+            "quantity": "3",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": "2026-03-26T04:53:52.000Z",
+            "rejection_reason": null,
+            "created_at": "2026-03-26T04:51:05.000Z",
+            "updated_at": "2026-03-26T04:51:05.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": "793G93",
+            "type": "non_inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 90,
+              "work_order_id": 23,
+              "repair_item_id": 34,
+              "defect_id": 83,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": true,
+              "repair_items": {
+                "repair_item_id": 34,
+                "name": "Engine Rebuild",
+                "description": "The entire engine needs to be replaced",
+                "estimated_hours": "40",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "The entire engine needs to be replaced",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-03-10T08:15:26.000Z",
+                "updated_at": "2026-03-10T08:15:26.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 148,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVN2K3YR540EMBS421YH",
+            "quantity": "0",
+            "serial_number": null,
+            "unit_price": "96.6",
+            "total_price": "0",
+            "status": "Rejected",
+            "notes": " (Stock deficit: Moved to Pending Approval)",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": "no need",
+            "created_at": "2026-03-11T14:38:53.000Z",
+            "updated_at": "2026-03-11T14:38:53.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 150,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVEZ7ZNSAQGAGXSA9E8F",
+            "quantity": "0",
+            "serial_number": null,
+            "unit_price": "150.91",
+            "total_price": "0",
+            "status": "Rejected",
+            "notes": " (Stock deficit: Moved to Pending Approval)",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": "No need",
+            "created_at": "2026-03-11T14:42:04.000Z",
+            "updated_at": "2026-03-11T14:42:04.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 198,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01KMM8GP76BR16ZR7J8B76ZKKX",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Parts_On_Order",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-26T05:04:41.000Z",
+            "updated_at": "2026-03-26T05:04:41.000Z",
+            "non_inventory_part_description": "Kisson Clutch Plate",
+            "non_inventory_part_name": "783840",
+            "type": "non_inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          }
+        ]
+      },
+      "total_actual_hours": 352.65,
+      "mechanic_assignments": [
+        {
+          "assignment_id": 89,
+          "is_completed": true,
+          "mechanic_name": "James",
+          "bay_number": "2",
+          "actual_hours": "0.05",
+          "assignment_history": [
+            {
+              "end": "2026-03-11T12:43:15.223Z",
+              "start": "2026-03-11T12:40:14.328Z"
+            }
+          ],
+          "time_tracking_history": [
+            {
+              "time": "2026-03-11T12:40:14.328Z",
+              "status": "Started"
+            },
+            {
+              "time": "2026-03-11T12:43:15.223Z",
+              "status": "Paused"
+            },
+            {
+              "time": "2026-03-26T05:19:42.752Z",
+              "status": "Completed"
+            }
+          ],
+          "status": "Completed",
+          "approval_status": "Approved",
+          "approval_timestamp": "2026-03-26T05:20:13.000Z",
+          "scheduled_start": "2026-03-11T02:45:00.000Z",
+          "scheduled_end": "2026-03-11T03:45:00.000Z",
+          "start": "2026-03-11T02:45:00.000Z",
+          "end": "2026-03-11T03:45:00.000Z",
+          "actual_start_datetime": "2026-03-11T12:40:14.000Z",
+          "actual_end_datetime": "2026-03-26T05:19:43.000Z",
+          "mechanic_notes": "",
+          "invoice_notes": null,
+          "hours": "0",
+          "mechanic_challenge_notes": null,
+          "mechanic_id": 2,
+          "duration": 1,
+          "pause_time": null,
+          "paused_time": "2026-03-11T12:43:15.000Z"
+        }
+      ],
+      "required_parts": "",
+      "repair_item_parts": [],
+      "notes": [],
+      "total_estimated_cost": 0,
+      "sm_id": "6671"
+    }
+  ]
+}
+================================================================================
+[2026-03-26T05:20:34.736Z] Garage Module API - RO 2278 and their defects/SMs {"2278":{"defects":["6671"],"sm":[]}} updated successfully
+Skipping - Invalid SM Id and RO id combination. SM 6671 is not assigned to RO 2278
+{
+  "userId": 211,
+  "source": "Garage Webhook",
+  "path": "/updateVehicleDefect_v2",
+  "method": "POST"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+{
+  "2278": [
+    {
+      "repair_log_id": 6671,
+      "scheduled_maintenance_setting_id": null,
+      "rpor_status": "Completed",
+      "invoice_status": null,
+      "labor_cost": "2.25",
+      "parts_cost": "495.02",
+      "total_cost": "497.27",
+      "current_kms": "784834.00",
+      "service_completion_date": "2026-03-26T04:00:00.000Z",
+      "work_order_number": "WO-2026-021",
+      "work_order_status": "Completed",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- New Value ----------------------------------------
+{
+  "2278": [
+    {
+      "repair_log_id": 6671,
+      "scheduled_maintenance_setting_id": null,
+      "rpor_status": "Completed",
+      "invoice_status": "Pending",
+      "labor_cost": "2.25",
+      "parts_cost": "495.02",
+      "total_cost": "497.27",
+      "current_kms": "784834.00",
+      "service_completion_date": "2026-03-26T04:00:00.000Z",
+      "work_order_number": "WO-2026-021",
+      "work_order_status": "Completed",
+      "invoice_number": "INV-2026-014",
+      "invoice_amount": "559.37"
+    }
+  ]
+}
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+{
+  "roid": 2278,
+  "defectid": "6671",
+  "sm_id": "6671",
+  "work_order_number": "WO-2026-021",
+  "work_order_status": "Completed",
+  "completion_date": "2026-03-26T05:20:13.000Z",
+  "invoice_status": "",
+  "vehicle_status": "",
+  "invoice_number": "INV-2026-014",
+  "current_kms": 784834,
+  "service_completion_date": "2026-03-26T05:20:13.000Z",
+  "invoice_amount": "559.37",
+  "invoice_url": "",
+  "defects_details": {
+    "defect_id": "6671",
+    "name": "Coolant replacement",
+    "external_ro_id": 2278,
+    "external_type": "Defect",
+    "external_defect_id": "6671",
+    "description": "Coolant",
+    "created_date": "March 11, 2026",
+    "repair_items": "Diagnostic",
+    "status": "Completed",
+    "required_parts": "",
+    "labor_cost": 2.25,
+    "parts_cost": 495.02,
+    "total_cost": 497.27,
+    "invoice_status": "Pending",
+    "completion_date": "2026-03-26T05:20:13.000Z",
+    "approved_by": "Esmail",
+    "sm_id": "6671",
+    "current_kms": 784834,
+    "service_completion_date": "2026-03-26T05:20:13.000Z"
+  },
+  "repair_items": [
+    {
+      "work_order_repair_item_id": 89,
+      "manager_notes": null,
+      "manager_notes_by": null,
+      "manager_notes_at": null,
+      "admin_notes": null,
+      "admin_notes_by": null,
+      "admin_notes_at": null,
+      "rejection_reasons": null,
+      "repair_item_id": 35,
+      "defect_id": "6671",
+      "defect_name": "Coolant replacement",
+      "defect_description": "Coolant",
+      "defect_status": "Approved",
+      "repair_name": "Diagnostic",
+      "description": "Standard Diagnostic",
+      "estimated_hours": 1,
+      "is_scheduled_maintenance": false,
+      "is_custom": true,
+      "status": "Approved",
+      "labor_cost": 45,
+      "work_description": "Standard Diagnostic procedure",
+      "shop_supplies": false,
+      "current_assignment_status": "Completed",
+      "work_orders": {
+        "work_order_id": 23,
+        "work_order_number": "WO-2026-021",
+        "customer_id": 1,
+        "vehicle_id": 1,
+        "visit_id": 3,
+        "ro_id": 2278,
+        "customer_ro_number": "2278",
+        "parent_work_order_number": null,
+        "transferred_at": null,
+        "requested_by": "Esmail",
+        "current_kms": 784834,
+        "status": "Invoiced",
+        "priority": "Medium",
+        "invoice_status": "Invoiced",
+        "estimated_completion": "2026-03-11T12:33:02.000Z",
+        "created_at": "2026-03-11T12:33:00.000Z",
+        "updated_at": "2026-03-11T12:33:00.000Z",
+        "locked_at": "2026-03-26T05:20:18.918Z",
+        "locked_by_user_id": 1,
+        "deleted": false,
+        "vehicle_status": "In_Shop",
+        "stop_reason": null,
+        "current_kms_history": [
+          {
+            "kms": 784834,
+            "createdAt": "2026-03-11T12:32:59.660Z",
+            "defect_id": 81,
+            "current_kms": 784834,
+            "defect_name": "Coolant replacement"
+          },
+          {
+            "kms": 784834,
+            "createdAt": "2026-03-11T12:40:14.259Z",
+            "defect_id": 81,
+            "repair_id": 89,
+            "defect_name": "Coolant replacement",
+            "mechanic_id": 2,
+            "repair_name": "Diagnostic",
+            "mechanic_name": "James"
+          },
+          {
+            "kms": 784834,
+            "createdAt": "2026-03-11T12:40:14.279Z",
+            "defect_id": 81,
+            "repair_id": 89,
+            "defect_name": "Coolant replacement",
+            "mechanic_id": 2,
+            "repair_name": "Diagnostic",
+            "mechanic_name": "James"
+          }
+        ],
+        "is_quick_job": false,
+        "customers": {
+          "customer_id": 1,
+          "name": "Skyway Coach Lines",
+          "contact_person": "Mohamed Esmail",
+          "email": "mel@dev.vto.group",
+          "phone": "(786) 392-0348",
+          "address": "2839 Saint Rose Parkway",
+          "city": "Coachella",
+          "state": "New York",
+          "postal_code": "64733940",
+          "created_at": "2026-02-13T05:04:45.000Z",
+          "updated_at": "2026-02-13T05:04:45.000Z",
+          "contact_phone": "",
+          "contact_email": "",
+          "ar_contact": "",
+          "ar_phone": "",
+          "ar_email": "",
+          "due_days": 45,
+          "external_id": null
+        },
+        "vehicles": {
+          "vehicle_id": 1,
+          "customer_id": 1,
+          "vehicle_type_id": 1,
+          "year": 2006,
+          "make": "PREVOST",
+          "model": "H3 Coach",
+          "trim": "46382",
+          "vin": "2PCH3349X61010312",
+          "unit_number": "9622",
+          "status": "In_Service",
+          "created_at": "2026-02-13T05:07:51.000Z",
+          "updated_at": "2026-02-13T05:07:51.000Z",
+          "verified": true
+        },
+        "invoices": [
+          {
+            "invoice_id": 14,
+            "work_order_id": 23,
+            "invoice_number": "INV-2026-014",
+            "subtotal": "495.02",
+            "tax_rate": "0.13",
+            "tax_amount": "64.35",
+            "total_amount": "559.37",
+            "status": "Pending",
+            "created_at": "2026-03-26T05:20:31.000Z",
+            "updated_at": "2026-03-26T05:20:31.000Z",
+            "notes": "",
+            "pdf_url": null
+          }
+        ],
+        "defects": [
+          {
+            "defect_id": 81,
+            "work_order_id": 23,
+            "vehicle_id": 1,
+            "name": "Coolant replacement",
+            "description": "Coolant",
+            "status": "Approved",
+            "disengage_reason": "Pending_Parts",
+            "disengage_notes": "Parts will take time to come",
+            "disengaged_at": "2026-03-11T12:42:50.000Z",
+            "created_at": "2026-03-11T12:33:00.000Z",
+            "updated_at": "2026-03-11T12:42:50.000Z",
+            "external_ro_id": 2278,
+            "external_defect_id": "6671",
+            "external_type": "Defect"
+          },
+          {
+            "defect_id": 83,
+            "work_order_id": 23,
+            "vehicle_id": 1,
+            "name": "Change the chain sprocket",
+            "description": "Change the chain sprocket",
+            "status": "Approved",
+            "disengage_reason": null,
+            "disengage_notes": null,
+            "disengaged_at": null,
+            "created_at": "2026-03-11T15:31:16.000Z",
+            "updated_at": "2026-03-11T15:31:16.000Z",
+            "external_ro_id": null,
+            "external_defect_id": null,
+            "external_type": null
+          }
+        ],
+        "work_order_repair_items": [
+          {
+            "work_order_repair_item_id": 89,
+            "rejection_reasons": null,
+            "work_order_id": 23,
+            "repair_item_id": 35,
+            "defect_id": 81,
+            "created_at": "2026-03-11T12:39:23.000Z",
+            "updated_at": "2026-03-11T12:39:23.000Z",
+            "status": "Approved",
+            "rejection_reason": null,
+            "admin_notes": null,
+            "admin_notes_by": null,
+            "admin_notes_at": null,
+            "manager_notes": null,
+            "manager_notes_by": null,
+            "manager_notes_at": null,
+            "shop_supplies": false,
+            "repair_items": {
+              "repair_item_id": 35,
+              "name": "Diagnostic",
+              "description": "Standard Diagnostic",
+              "estimated_hours": "1",
+              "labor_cost": "0",
+              "has_parts": false,
+              "work_description": "Standard Diagnostic procedure",
+              "total_estimated_cost": "0",
+              "is_active": true,
+              "is_custom": true,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "fixed_amount": null,
+              "is_scheduled_maintenance": false,
+              "repair_item_parts": []
+            },
+            "defects": {
+              "defect_id": 81,
+              "work_order_id": 23,
+              "vehicle_id": 1,
+              "name": "Coolant replacement",
+              "description": "Coolant",
+              "status": "Approved",
+              "disengage_reason": "Pending_Parts",
+              "disengage_notes": "Parts will take time to come",
+              "disengaged_at": "2026-03-11T12:42:50.000Z",
+              "created_at": "2026-03-11T12:33:00.000Z",
+              "updated_at": "2026-03-11T12:42:50.000Z",
+              "external_ro_id": 2278,
+              "external_defect_id": "6671",
+              "external_type": "Defect"
+            },
+            "mechanic_assignments": [
+              {
+                "assignment_id": 89,
+                "work_order_repair_item_id": 89,
+                "defect_id": null,
+                "mechanic_id": 2,
+                "bay_id": 2,
+                "start_datetime": "2026-03-11T02:45:00.000Z",
+                "end_datetime": "2026-03-11T03:45:00.000Z",
+                "actual_start_datetime": "2026-03-11T12:40:14.000Z",
+                "actual_end_datetime": "2026-03-26T05:19:43.000Z",
+                "status": "Completed",
+                "notes": null,
+                "created_at": "2026-03-11T12:39:35.000Z",
+                "updated_at": "2026-03-11T12:39:35.000Z",
+                "reject_reason": null,
+                "approval_status": "Approved",
+                "hours": "0",
+                "invoice_notes": null,
+                "mechanic_challenge_notes": null,
+                "pause_time": null,
+                "paused_time": "2026-03-11T12:43:15.000Z",
+                "actual_hours": "0.05",
+                "assignment_history": [
+                  {
+                    "end": "2026-03-11T12:43:15.223Z",
+                    "start": "2026-03-11T12:40:14.328Z"
+                  }
+                ],
+                "is_completed": true,
+                "time_tracking_history": [
+                  {
+                    "time": "2026-03-11T12:40:14.328Z",
+                    "status": "Started"
+                  },
+                  {
+                    "time": "2026-03-11T12:43:15.223Z",
+                    "status": "Paused"
+                  },
+                  {
+                    "time": "2026-03-26T05:19:42.752Z",
+                    "status": "Completed"
+                  }
+                ],
+                "approval_timestamp": "2026-03-26T05:20:13.000Z",
+                "mechanics": {
+                  "mechanic_id": 2,
+                  "name": "James",
+                  "employee_id": "EM001",
+                  "contact_number": "(978) 658-9769",
+                  "efficiency_rating": "100",
+                  "status": "Available",
+                  "qr_code_path": null,
+                  "user_id": 4,
+                  "created_at": "2026-02-13T05:54:43.000Z",
+                  "updated_at": "2026-02-13T05:54:43.000Z",
+                  "type": "Mechanic"
+                },
+                "repair_bays": {
+                  "bay_id": 2,
+                  "bay_number": "2",
+                  "bay_name": "BAY 2",
+                  "description": "",
+                  "status": "Available",
+                  "created_at": "2026-02-13T07:10:30.000Z",
+                  "updated_at": "2026-02-13T07:10:30.000Z"
+                }
+              }
+            ],
+            "repair_item_notes": []
+          },
+          {
+            "work_order_repair_item_id": 90,
+            "rejection_reasons": null,
+            "work_order_id": 23,
+            "repair_item_id": 34,
+            "defect_id": 83,
+            "created_at": "2026-03-11T15:31:16.000Z",
+            "updated_at": "2026-03-11T15:31:16.000Z",
+            "status": "Approved",
+            "rejection_reason": null,
+            "admin_notes": null,
+            "admin_notes_by": null,
+            "admin_notes_at": null,
+            "manager_notes": null,
+            "manager_notes_by": null,
+            "manager_notes_at": null,
+            "shop_supplies": false,
+            "repair_items": {
+              "repair_item_id": 34,
+              "name": "Engine Rebuild",
+              "description": "The entire engine needs to be replaced",
+              "estimated_hours": "40",
+              "labor_cost": "0",
+              "has_parts": false,
+              "work_description": "The entire engine needs to be replaced",
+              "total_estimated_cost": "0",
+              "is_active": true,
+              "is_custom": false,
+              "created_at": "2026-03-10T08:15:26.000Z",
+              "updated_at": "2026-03-10T08:15:26.000Z",
+              "fixed_amount": null,
+              "is_scheduled_maintenance": false,
+              "repair_item_parts": []
+            },
+            "defects": {
+              "defect_id": 83,
+              "work_order_id": 23,
+              "vehicle_id": 1,
+              "name": "Change the chain sprocket",
+              "description": "Change the chain sprocket",
+              "status": "Approved",
+              "disengage_reason": null,
+              "disengage_notes": null,
+              "disengaged_at": null,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "external_ro_id": null,
+              "external_defect_id": null,
+              "external_type": null
+            },
+            "mechanic_assignments": [
+              {
+                "assignment_id": 90,
+                "work_order_repair_item_id": 90,
+                "defect_id": null,
+                "mechanic_id": 2,
+                "bay_id": 2,
+                "start_datetime": "2026-03-12T09:30:00.000Z",
+                "end_datetime": "2026-03-18T15:29:00.000Z",
+                "actual_start_datetime": "2026-03-11T15:31:00.000Z",
+                "actual_end_datetime": "2026-03-26T05:19:52.000Z",
+                "status": "Completed",
+                "notes": null,
+                "created_at": "2026-03-11T15:31:16.000Z",
+                "updated_at": "2026-03-11T15:31:16.000Z",
+                "reject_reason": null,
+                "approval_status": "Approved",
+                "hours": "0",
+                "invoice_notes": null,
+                "mechanic_challenge_notes": null,
+                "pause_time": null,
+                "paused_time": "2026-03-12T11:03:31.000Z",
+                "actual_hours": "19.53",
+                "assignment_history": [
+                  {
+                    "end": "2026-03-12T11:03:31.401Z",
+                    "start": "2026-03-11T15:31:00.000Z"
+                  }
+                ],
+                "is_completed": true,
+                "time_tracking_history": [
+                  {
+                    "time": "2026-03-11T15:31:00.000Z",
+                    "status": "Started"
+                  },
+                  {
+                    "time": "2026-03-12T11:03:31.401Z",
+                    "status": "Paused"
+                  },
+                  {
+                    "time": "2026-03-26T05:19:52.306Z",
+                    "status": "Completed"
+                  }
+                ],
+                "approval_timestamp": "2026-03-26T05:20:19.000Z",
+                "mechanics": {
+                  "mechanic_id": 2,
+                  "name": "James",
+                  "employee_id": "EM001",
+                  "contact_number": "(978) 658-9769",
+                  "efficiency_rating": "100",
+                  "status": "Available",
+                  "qr_code_path": null,
+                  "user_id": 4,
+                  "created_at": "2026-02-13T05:54:43.000Z",
+                  "updated_at": "2026-02-13T05:54:43.000Z",
+                  "type": "Mechanic"
+                },
+                "repair_bays": {
+                  "bay_id": 2,
+                  "bay_number": "2",
+                  "bay_name": "BAY 2",
+                  "description": "",
+                  "status": "Available",
+                  "created_at": "2026-02-13T07:10:30.000Z",
+                  "updated_at": "2026-02-13T07:10:30.000Z"
+                }
+              }
+            ],
+            "repair_item_notes": []
+          }
+        ],
+        "work_order_parts_used": [
+          {
+            "work_order_parts_used_id": 149,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVN2K3YR540EMBS421YH",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "96.6",
+            "total_price": "193.2",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-11T14:38:53.000Z",
+            "updated_at": "2026-03-11T14:38:53.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Approved",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 151,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVEZ7ZNSAQGAGXSA9E8F",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "150.91",
+            "total_price": "301.82",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-11T14:42:04.000Z",
+            "updated_at": "2026-03-11T14:42:04.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Approved",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 195,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 90,
+            "defect_id": null,
+            "inventory_id": "01KMM89JNMDYJMKK69R1V0FQ9F",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": "2026-03-26T05:10:21.000Z",
+            "rejection_reason": null,
+            "created_at": "2026-03-26T04:50:15.000Z",
+            "updated_at": "2026-03-26T04:50:15.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": "Halt Panel Engine block",
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 90,
+              "work_order_id": 23,
+              "repair_item_id": 34,
+              "defect_id": 83,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "rejection_reason": null,
+              "status": "Approved",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": true,
+              "repair_items": {
+                "repair_item_id": 34,
+                "name": "Engine Rebuild",
+                "description": "The entire engine needs to be replaced",
+                "estimated_hours": "40",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "The entire engine needs to be replaced",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-03-10T08:15:26.000Z",
+                "updated_at": "2026-03-10T08:15:26.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 196,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 90,
+            "defect_id": null,
+            "inventory_id": "01KMM889M4BHP1860VPZEZH2ZA",
+            "quantity": "3",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": "2026-03-26T05:11:56.000Z",
+            "rejection_reason": null,
+            "created_at": "2026-03-26T04:50:40.000Z",
+            "updated_at": "2026-03-26T04:50:40.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": "Chevy Side mirror",
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 90,
+              "work_order_id": 23,
+              "repair_item_id": 34,
+              "defect_id": 83,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "rejection_reason": null,
+              "status": "Approved",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": true,
+              "repair_items": {
+                "repair_item_id": 34,
+                "name": "Engine Rebuild",
+                "description": "The entire engine needs to be replaced",
+                "estimated_hours": "40",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "The entire engine needs to be replaced",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-03-10T08:15:26.000Z",
+                "updated_at": "2026-03-10T08:15:26.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 197,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 90,
+            "defect_id": null,
+            "inventory_id": "01KMM7SP08R8NVGYN4FGVHVF6S",
+            "quantity": "3",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Accepted",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": "2026-03-26T04:53:52.000Z",
+            "rejection_reason": null,
+            "created_at": "2026-03-26T04:51:05.000Z",
+            "updated_at": "2026-03-26T04:51:05.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": "793G93",
+            "type": "non_inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 90,
+              "work_order_id": 23,
+              "repair_item_id": 34,
+              "defect_id": 83,
+              "created_at": "2026-03-11T15:31:16.000Z",
+              "updated_at": "2026-03-11T15:31:16.000Z",
+              "rejection_reason": null,
+              "status": "Approved",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": true,
+              "repair_items": {
+                "repair_item_id": 34,
+                "name": "Engine Rebuild",
+                "description": "The entire engine needs to be replaced",
+                "estimated_hours": "40",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "The entire engine needs to be replaced",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-03-10T08:15:26.000Z",
+                "updated_at": "2026-03-10T08:15:26.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 148,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVN2K3YR540EMBS421YH",
+            "quantity": "0",
+            "serial_number": null,
+            "unit_price": "96.6",
+            "total_price": "0",
+            "status": "Rejected",
+            "notes": " (Stock deficit: Moved to Pending Approval)",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": "no need",
+            "created_at": "2026-03-11T14:38:53.000Z",
+            "updated_at": "2026-03-11T14:38:53.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Approved",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 150,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01K9CVYVEZ7ZNSAQGAGXSA9E8F",
+            "quantity": "0",
+            "serial_number": null,
+            "unit_price": "150.91",
+            "total_price": "0",
+            "status": "Rejected",
+            "notes": " (Stock deficit: Moved to Pending Approval)",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": "No need",
+            "created_at": "2026-03-11T14:42:04.000Z",
+            "updated_at": "2026-03-11T14:42:04.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Approved",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 198,
+            "work_order_id": 23,
+            "work_order_repair_item_id": 89,
+            "defect_id": null,
+            "inventory_id": "01KMM8GP76BR16ZR7J8B76ZKKX",
+            "quantity": "2",
+            "serial_number": null,
+            "unit_price": "0",
+            "total_price": "0",
+            "status": "Parts_On_Order",
+            "notes": "",
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-26T05:04:41.000Z",
+            "updated_at": "2026-03-26T05:04:41.000Z",
+            "non_inventory_part_description": "Kisson Clutch Plate",
+            "non_inventory_part_name": "783840",
+            "type": "non_inventory",
+            "additional_part": true,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 89,
+              "work_order_id": 23,
+              "repair_item_id": 35,
+              "defect_id": 81,
+              "created_at": "2026-03-11T12:39:23.000Z",
+              "updated_at": "2026-03-11T12:39:23.000Z",
+              "rejection_reason": null,
+              "status": "Approved",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 35,
+                "name": "Diagnostic",
+                "description": "Standard Diagnostic",
+                "estimated_hours": "1",
+                "labor_cost": "0",
+                "has_parts": false,
+                "work_description": "Standard Diagnostic procedure",
+                "total_estimated_cost": "0",
+                "is_active": true,
+                "is_custom": true,
+                "created_at": "2026-03-11T12:39:23.000Z",
+                "updated_at": "2026-03-11T12:39:23.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          }
+        ]
+      },
+      "total_actual_hours": 352.65,
+      "mechanic_assignments": [
+        {
+          "assignment_id": 89,
+          "is_completed": true,
+          "mechanic_name": "James",
+          "bay_number": "2",
+          "actual_hours": "0.05",
+          "assignment_history": [
+            {
+              "end": "2026-03-11T12:43:15.223Z",
+              "start": "2026-03-11T12:40:14.328Z"
+            }
+          ],
+          "time_tracking_history": [
+            {
+              "time": "2026-03-11T12:40:14.328Z",
+              "status": "Started"
+            },
+            {
+              "time": "2026-03-11T12:43:15.223Z",
+              "status": "Paused"
+            },
+            {
+              "time": "2026-03-26T05:19:42.752Z",
+              "status": "Completed"
+            }
+          ],
+          "status": "Completed",
+          "approval_status": "Approved",
+          "approval_timestamp": "2026-03-26T05:20:13.000Z",
+          "scheduled_start": "2026-03-11T02:45:00.000Z",
+          "scheduled_end": "2026-03-11T03:45:00.000Z",
+          "start": "2026-03-11T02:45:00.000Z",
+          "end": "2026-03-11T03:45:00.000Z",
+          "actual_start_datetime": "2026-03-11T12:40:14.000Z",
+          "actual_end_datetime": "2026-03-26T05:19:43.000Z",
+          "mechanic_notes": "",
+          "invoice_notes": null,
+          "hours": "0",
+          "mechanic_challenge_notes": null,
+          "mechanic_id": 2,
+          "duration": 1,
+          "pause_time": null,
+          "paused_time": "2026-03-11T12:43:15.000Z"
+        }
+      ],
+      "required_parts": "",
+      "repair_item_parts": [],
+      "notes": [],
+      "total_estimated_cost": 0,
+      "sm_id": "6671"
+    }
+  ]
+}
+================================================================================
+[2026-03-26T07:52:06.646Z] Vehicle Latest Km API Called for vehicle 9668
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:52:07.627Z] Vehicle Latest Km API Called for vehicle 9668
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:54:54.390Z] Vehicle Latest Km API Called for vehicle 9668
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:54:57.210Z] Vehicle Latest Km API Called for vehicle 9668
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:54:57.922Z] Vehicle Latest Km API Called for vehicle 9668
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:54:58.591Z] Vehicle Latest Km API Called for vehicle 9668
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:55:04.947Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:55:17.215Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:55:35.998Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:55:36.718Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:55:37.082Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:55:37.455Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:55:51.541Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:55:52.325Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:56:20.197Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:56:21.846Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:56:22.233Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:56:22.620Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:58:24.410Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:58:24.792Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:59:25.171Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T07:59:26.109Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:15:02.800Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:17:03.570Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:17:48.932Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:17:53.349Z] Garage Module API - RO 2295 and their defects/SMs {"2295":{"defects":["6696"],"sm":[]}} updated successfully
+Skipping - Invalid SM Id and RO id combination. SM 6696 is not assigned to RO 2295
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/updateVehicleDefect_v2",
+  "method": "POST"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+{
+  "2295": [
+    {
+      "repair_log_id": 6696,
+      "scheduled_maintenance_setting_id": null,
+      "rpor_status": "SR_DISENGAGED",
+      "invoice_status": null,
+      "labor_cost": null,
+      "parts_cost": null,
+      "total_cost": null,
+      "current_kms": "1184820.00",
+      "service_completion_date": null,
+      "work_order_number": "WO-2026-097",
+      "work_order_status": "In_Progress",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- New Value ----------------------------------------
+{
+  "2295": [
+    {
+      "repair_log_id": 6696,
+      "scheduled_maintenance_setting_id": null,
+      "rpor_status": "Repair_Started",
+      "invoice_status": null,
+      "labor_cost": null,
+      "parts_cost": null,
+      "total_cost": null,
+      "current_kms": "1184820.00",
+      "service_completion_date": null,
+      "work_order_number": "WO-2026-097",
+      "work_order_status": "In_Progress",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+{
+  "roid": 2295,
+  "defectid": "6696",
+  "sm_id": "6696",
+  "work_order_number": "WO-2026-097",
+  "work_order_status": "In_Progress",
+  "completion_date": "",
+  "invoice_status": "",
+  "vehicle_status": "In_Bay",
+  "invoice_number": "",
+  "current_kms": "",
+  "service_completion_date": "",
+  "invoice_amount": "",
+  "invoice_url": "",
+  "defects_details": {
+    "defect_id": "6696",
+    "name": "Coolant replacment - Coolant",
+    "external_ro_id": 2295,
+    "external_type": "Defect",
+    "external_defect_id": "6696",
+    "description": "Coolant",
+    "created_date": "March 24, 2026",
+    "repair_items": "Diagnostic",
+    "status": "SR_STARTED",
+    "required_parts": "",
+    "sm_id": "6696"
+  },
+  "repair_items": [
+    {
+      "work_order_repair_item_id": 253,
+      "manager_notes": null,
+      "manager_notes_by": null,
+      "manager_notes_at": null,
+      "admin_notes": null,
+      "admin_notes_by": null,
+      "admin_notes_at": null,
+      "rejection_reasons": null,
+      "repair_item_id": 117,
+      "defect_id": "6696",
+      "defect_name": "Coolant replacment - Coolant",
+      "defect_description": "Coolant",
+      "defect_status": "In_Progress",
+      "repair_name": "Diagnostic",
+      "description": "Standard Diagnostic",
+      "estimated_hours": 1,
+      "is_scheduled_maintenance": false,
+      "is_custom": true,
+      "status": "Pending",
+      "labor_cost": 10,
+      "work_description": "Standard Diagnostic procedure",
+      "shop_supplies": false,
+      "current_assignment_status": "In_Progress",
+      "work_orders": {
+        "work_order_id": 100,
+        "work_order_number": "WO-2026-097",
+        "customer_id": 2,
+        "vehicle_id": 5,
+        "visit_id": 1,
+        "ro_id": 2295,
+        "customer_ro_number": "2295",
+        "parent_work_order_number": null,
+        "transferred_at": null,
+        "requested_by": "Esmail",
+        "current_kms": 1187573,
+        "status": "In_Progress",
+        "priority": "Medium",
+        "invoice_status": "Invoiced",
+        "estimated_completion": "2026-03-24T15:58:56.000Z",
+        "created_at": "2026-03-24T15:58:49.000Z",
+        "updated_at": "2026-03-24T15:58:49.000Z",
+        "locked_at": null,
+        "locked_by_user_id": null,
+        "deleted": false,
+        "vehicle_status": "In_Bay",
+        "stop_reason": null,
+        "current_kms_history": [
+          {
+            "kms": 1184820,
+            "createdAt": "2026-03-24T15:58:49.351Z",
+            "defect_id": 202,
+            "current_kms": 1184820,
+            "defect_name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT"
+          },
+          {
+            "kms": 1185880,
+            "createdAt": "2026-03-24T16:00:49.266Z",
+            "defect_id": 202,
+            "repair_id": 252,
+            "defect_name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT",
+            "mechanic_id": 1,
+            "repair_name": "Diagnostic",
+            "mechanic_name": "Rajkumar"
+          },
+          {
+            "kms": 1187573,
+            "createdAt": "2026-03-26T10:17:52.575Z",
+            "defect_id": 203,
+            "repair_id": 253,
+            "defect_name": "Coolant replacment - Coolant",
+            "mechanic_id": 1,
+            "repair_name": "Diagnostic",
+            "mechanic_name": "Rajkumar"
+          }
+        ],
+        "is_quick_job": false,
+        "customers": {
+          "customer_id": 2,
+          "name": "Skyway Coach Lines",
+          "contact_person": "Mano Bala",
+          "email": "skywaycoach@mail.com",
+          "phone": "(782) 999-1022",
+          "address": "Coachella Lakes RV Resort, Dillon Road,",
+          "city": "Coachella",
+          "state": "California",
+          "postal_code": "92236",
+          "created_at": "2026-02-12T11:08:37.000Z",
+          "updated_at": "2026-02-12T11:08:37.000Z",
+          "contact_phone": "(782) 999-1022",
+          "contact_email": "skywaycoach@mail.com",
+          "ar_contact": "Mano Bala",
+          "ar_phone": "(782) 999-1022",
+          "ar_email": "skywaycoach@mail.com",
+          "due_days": 30,
+          "external_id": null
+        },
+        "vehicles": {
+          "vehicle_id": 5,
+          "customer_id": 2,
+          "vehicle_type_id": 1,
+          "year": 2022,
+          "make": "New",
+          "model": "N",
+          "trim": "1",
+          "vin": "123456789U1234560",
+          "unit_number": "9611",
+          "status": "In_Service",
+          "created_at": "2026-02-18T13:39:59.000Z",
+          "updated_at": "2026-02-18T13:39:59.000Z",
+          "verified": false
+        },
+        "invoices": [
+          {
+            "invoice_id": 51,
+            "work_order_id": 100,
+            "invoice_number": "INV-2026-050",
+            "subtotal": "0",
+            "tax_rate": "0.13",
+            "tax_amount": "0",
+            "total_amount": "0",
+            "status": "Pending",
+            "created_at": "2026-03-24T16:01:46.000Z",
+            "updated_at": "2026-03-24T16:01:47.000Z",
+            "notes": "",
+            "pdf_url": "https://storage.googleapis.com/garage-dev-bucket/invoices/Skyway_Coach_Lines/INV-2026-050.pdf?GoogleAccessId=485138616021-compute%40developer.gserviceaccount.com&Expires=1805904111&Signature=ix7XvwzmW4nh28ysPw6otSPFGZ2t9t%2FqEFiKnSiJReEIDEDXqNnBfp9gXpmijxHU0VGpacg2py0YXSN9znZ4KisY5WqGsWQfNFQjX6FaGLMkORjf0J7U6YaeSEPxBWEm%2F7Sg6nmUXuWvzRtg4nkg70sRHbwiQENEt2XJuiS8f3bpMJMaUxzJzoZ%2FbjvM2UZbnvZ6gtd5U7SohcvjhNjNo7Vo9Y9MBcavRa8adRvQMt5mJ7nT%2BZIgKqRHoIqrNQCiuGhcfCQo3pTo%2FJOEtYk9DH1ne56EvjE%2BB%2Bg6Wv04Z%2BZxIXmJbRvOYlHJUHIfiD69OdxchJr%2Fipv5o6v%2Bnw1PAg%3D%3D"
+          }
+        ],
+        "defects": [
+          {
+            "defect_id": 203,
+            "work_order_id": 100,
+            "vehicle_id": 5,
+            "name": "Coolant replacment - Coolant",
+            "description": "Coolant",
+            "status": "In_Progress",
+            "disengage_reason": "Deferred",
+            "disengage_notes": null,
+            "disengaged_at": "2026-03-24T16:01:05.000Z",
+            "created_at": "2026-03-24T15:58:49.000Z",
+            "updated_at": "2026-03-24T16:01:05.000Z",
+            "external_ro_id": 2295,
+            "external_defect_id": "6696",
+            "external_type": "Defect"
+          },
+          {
+            "defect_id": 202,
+            "work_order_id": 100,
+            "vehicle_id": 5,
+            "name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT",
+            "description": "Scheduled Maintenance",
+            "status": "Approved",
+            "disengage_reason": null,
+            "disengage_notes": null,
+            "disengaged_at": null,
+            "created_at": "2026-03-24T15:58:49.000Z",
+            "updated_at": "2026-03-24T15:58:49.000Z",
+            "external_ro_id": 2295,
+            "external_defect_id": "6686",
+            "external_type": "Defect"
+          }
+        ],
+        "work_order_repair_items": [
+          {
+            "work_order_repair_item_id": 252,
+            "rejection_reasons": null,
+            "work_order_id": 100,
+            "repair_item_id": 116,
+            "defect_id": 202,
+            "created_at": "2026-03-24T15:59:09.000Z",
+            "updated_at": "2026-03-24T15:59:09.000Z",
+            "status": "Approved",
+            "rejection_reason": null,
+            "admin_notes": null,
+            "admin_notes_by": null,
+            "admin_notes_at": null,
+            "manager_notes": null,
+            "manager_notes_by": null,
+            "manager_notes_at": null,
+            "shop_supplies": false,
+            "repair_items": {
+              "repair_item_id": 116,
+              "name": "Diagnostic",
+              "description": "Standard Diagnostic",
+              "estimated_hours": "1",
+              "labor_cost": "0",
+              "has_parts": false,
+              "work_description": "Standard Diagnostic procedure",
+              "total_estimated_cost": "0",
+              "is_active": true,
+              "is_custom": true,
+              "created_at": "2026-03-24T15:59:09.000Z",
+              "updated_at": "2026-03-24T15:59:09.000Z",
+              "fixed_amount": null,
+              "is_scheduled_maintenance": false,
+              "repair_item_parts": []
+            },
+            "defects": {
+              "defect_id": 202,
+              "work_order_id": 100,
+              "vehicle_id": 5,
+              "name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT",
+              "description": "Scheduled Maintenance",
+              "status": "Approved",
+              "disengage_reason": null,
+              "disengage_notes": null,
+              "disengaged_at": null,
+              "created_at": "2026-03-24T15:58:49.000Z",
+              "updated_at": "2026-03-24T15:58:49.000Z",
+              "external_ro_id": 2295,
+              "external_defect_id": "6686",
+              "external_type": "Defect"
+            },
+            "mechanic_assignments": [
+              {
+                "assignment_id": 219,
+                "work_order_repair_item_id": 252,
+                "defect_id": null,
+                "mechanic_id": 1,
+                "bay_id": 3,
+                "start_datetime": "2026-03-23T18:30:00.000Z",
+                "end_datetime": "2026-03-23T19:30:00.000Z",
+                "actual_start_datetime": "2026-03-24T16:00:50.000Z",
+                "actual_end_datetime": "2026-03-24T16:01:11.000Z",
+                "status": "Completed",
+                "notes": null,
+                "created_at": "2026-03-24T15:59:29.000Z",
+                "updated_at": "2026-03-24T15:59:29.000Z",
+                "reject_reason": null,
+                "approval_status": "Approved",
+                "hours": "0",
+                "invoice_notes": "Existing Km changed from 1185878 to 1185880",
+                "mechanic_challenge_notes": null,
+                "pause_time": null,
+                "paused_time": null,
+                "actual_hours": "0",
+                "assignment_history": [
+                  {
+                    "end": "2026-03-24T16:01:10.604Z",
+                    "start": "2026-03-24T16:00:50.019Z"
+                  }
+                ],
+                "is_completed": true,
+                "time_tracking_history": [
+                  {
+                    "time": "2026-03-24T16:00:50.019Z",
+                    "status": "Started"
+                  },
+                  {
+                    "time": "2026-03-24T16:01:10.604Z",
+                    "status": "Completed"
+                  }
+                ],
+                "approval_timestamp": "2026-03-24T16:01:19.000Z",
+                "mechanics": {
+                  "mechanic_id": 1,
+                  "name": "Rajkumar",
+                  "employee_id": "RK001",
+                  "contact_number": null,
+                  "efficiency_rating": "100",
+                  "status": "Working",
+                  "qr_code_path": null,
+                  "user_id": 49,
+                  "created_at": "2026-02-12T10:21:28.000Z",
+                  "updated_at": "2026-02-12T10:21:28.000Z",
+                  "type": "Mechanic"
+                },
+                "repair_bays": {
+                  "bay_id": 3,
+                  "bay_number": "3",
+                  "bay_name": "QuickJob Bay",
+                  "description": "",
+                  "status": "Available",
+                  "created_at": "2026-02-12T10:22:30.000Z",
+                  "updated_at": "2026-02-12T10:22:30.000Z"
+                }
+              }
+            ],
+            "repair_item_notes": []
+          },
+          {
+            "work_order_repair_item_id": 253,
+            "rejection_reasons": null,
+            "work_order_id": 100,
+            "repair_item_id": 117,
+            "defect_id": 203,
+            "created_at": "2026-03-24T15:59:11.000Z",
+            "updated_at": "2026-03-24T15:59:11.000Z",
+            "status": "Pending",
+            "rejection_reason": null,
+            "admin_notes": null,
+            "admin_notes_by": null,
+            "admin_notes_at": null,
+            "manager_notes": null,
+            "manager_notes_by": null,
+            "manager_notes_at": null,
+            "shop_supplies": false,
+            "repair_items": {
+              "repair_item_id": 117,
+              "name": "Diagnostic",
+              "description": "Standard Diagnostic",
+              "estimated_hours": "1",
+              "labor_cost": "0",
+              "has_parts": false,
+              "work_description": "Standard Diagnostic procedure",
+              "total_estimated_cost": "0",
+              "is_active": true,
+              "is_custom": true,
+              "created_at": "2026-03-24T15:59:10.000Z",
+              "updated_at": "2026-03-24T15:59:10.000Z",
+              "fixed_amount": null,
+              "is_scheduled_maintenance": false,
+              "repair_item_parts": []
+            },
+            "defects": {
+              "defect_id": 203,
+              "work_order_id": 100,
+              "vehicle_id": 5,
+              "name": "Coolant replacment - Coolant",
+              "description": "Coolant",
+              "status": "In_Progress",
+              "disengage_reason": "Deferred",
+              "disengage_notes": null,
+              "disengaged_at": "2026-03-24T16:01:05.000Z",
+              "created_at": "2026-03-24T15:58:49.000Z",
+              "updated_at": "2026-03-24T16:01:05.000Z",
+              "external_ro_id": 2295,
+              "external_defect_id": "6696",
+              "external_type": "Defect"
+            },
+            "mechanic_assignments": [
+              {
+                "assignment_id": 220,
+                "work_order_repair_item_id": 253,
+                "defect_id": null,
+                "mechanic_id": 1,
+                "bay_id": 3,
+                "start_datetime": "2026-03-23T19:30:00.000Z",
+                "end_datetime": "2026-03-23T20:30:00.000Z",
+                "actual_start_datetime": "2026-03-26T10:17:53.000Z",
+                "actual_end_datetime": null,
+                "status": "In_Progress",
+                "notes": null,
+                "created_at": "2026-03-24T15:59:33.000Z",
+                "updated_at": "2026-03-24T15:59:33.000Z",
+                "reject_reason": null,
+                "approval_status": "Not_Submitted",
+                "hours": "0",
+                "invoice_notes": null,
+                "mechanic_challenge_notes": null,
+                "pause_time": null,
+                "paused_time": null,
+                "actual_hours": null,
+                "assignment_history": [
+                  {
+                    "end": null,
+                    "start": "2026-03-26T10:17:53.236Z"
+                  }
+                ],
+                "is_completed": false,
+                "time_tracking_history": [
+                  {
+                    "time": "2026-03-26T10:17:53.236Z",
+                    "status": "Started"
+                  }
+                ],
+                "approval_timestamp": null,
+                "mechanics": {
+                  "mechanic_id": 1,
+                  "name": "Rajkumar",
+                  "employee_id": "RK001",
+                  "contact_number": null,
+                  "efficiency_rating": "100",
+                  "status": "Working",
+                  "qr_code_path": null,
+                  "user_id": 49,
+                  "created_at": "2026-02-12T10:21:28.000Z",
+                  "updated_at": "2026-02-12T10:21:28.000Z",
+                  "type": "Mechanic"
+                },
+                "repair_bays": {
+                  "bay_id": 3,
+                  "bay_number": "3",
+                  "bay_name": "QuickJob Bay",
+                  "description": "",
+                  "status": "Available",
+                  "created_at": "2026-02-12T10:22:30.000Z",
+                  "updated_at": "2026-02-12T10:22:30.000Z"
+                }
+              }
+            ],
+            "repair_item_notes": []
+          }
+        ],
+        "work_order_parts_used": []
+      },
+      "total_actual_hours": 0,
+      "mechanic_assignments": [
+        {
+          "assignment_id": 220,
+          "work_order_repair_item_id": 253,
+          "defect_id": null,
+          "mechanic_id": 1,
+          "bay_id": 3,
+          "start_datetime": "2026-03-23T19:30:00.000Z",
+          "end_datetime": "2026-03-23T20:30:00.000Z",
+          "actual_start_datetime": "2026-03-26T10:17:53.000Z",
+          "actual_end_datetime": null,
+          "status": "In_Progress",
+          "notes": null,
+          "created_at": "2026-03-24T15:59:33.000Z",
+          "updated_at": "2026-03-24T15:59:33.000Z",
+          "reject_reason": null,
+          "approval_status": "Not_Submitted",
+          "hours": "0",
+          "invoice_notes": null,
+          "mechanic_challenge_notes": null,
+          "pause_time": null,
+          "paused_time": null,
+          "actual_hours": null,
+          "assignment_history": [
+            {
+              "end": null,
+              "start": "2026-03-26T10:17:53.236Z"
+            }
+          ],
+          "is_completed": false,
+          "time_tracking_history": [
+            {
+              "time": "2026-03-26T10:17:53.236Z",
+              "status": "Started"
+            }
+          ],
+          "approval_timestamp": null
+        }
+      ],
+      "required_parts": "",
+      "repair_item_parts": [],
+      "notes": [],
+      "total_estimated_cost": 0,
+      "sm_id": "6696"
+    }
+  ]
+}
+================================================================================
+[2026-03-26T10:17:56.910Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:18:18.487Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:19:02.926Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:53:38.339Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:53:40.587Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:53:41.108Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:53:41.621Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:54:49.188Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T10:54:50.212Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:01:14.678Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:01:34.790Z] Vehicle Latest Km API Called for vehicle 9622
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:20:58.087Z] Garage Module API - RO 2295 and their defects/SMs {"2295":{"defects":["6686"],"sm":[]}} updated successfully
+Skipping - Invalid SM Id and RO id combination. SM 6686 is not assigned to RO 2295
+{
+  "userId": 211,
+  "source": "Garage Webhook",
+  "path": "/updateVehicleDefect_v2",
+  "method": "POST"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+{
+  "2295": [
+    {
+      "repair_log_id": 6686,
+      "scheduled_maintenance_setting_id": 5,
+      "rpor_status": "Completed",
+      "invoice_status": null,
+      "labor_cost": null,
+      "parts_cost": null,
+      "total_cost": null,
+      "current_kms": "1185880.00",
+      "service_completion_date": "2026-03-24T04:00:00.000Z",
+      "work_order_number": "WO-2026-097",
+      "work_order_status": "Scheduled",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- New Value ----------------------------------------
+{
+  "2295": [
+    {
+      "repair_log_id": 6686,
+      "scheduled_maintenance_setting_id": 5,
+      "rpor_status": "In_Progress",
+      "invoice_status": null,
+      "labor_cost": null,
+      "parts_cost": null,
+      "total_cost": null,
+      "current_kms": "1184820.00",
+      "service_completion_date": "2026-03-24T04:00:00.000Z",
+      "work_order_number": "WO-2026-031",
+      "work_order_status": "Open",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+{
+  "roid": 2295,
+  "defectid": "6686",
+  "sm_id": "6686",
+  "work_order_number": "WO-2026-031",
+  "work_order_status": "Open",
+  "completion_date": "",
+  "invoice_status": "",
+  "vehicle_status": "",
+  "invoice_number": "",
+  "current_kms": 1184820,
+  "service_completion_date": "",
+  "invoice_amount": "",
+  "invoice_url": "",
+  "defects_details": {
+    "defect_id": "6686",
+    "name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT",
+    "external_ro_id": 2295,
+    "external_type": "Defect",
+    "external_defect_id": "6686",
+    "description": "Scheduled Maintenance",
+    "created_date": "March 23, 2026",
+    "repair_items": "N/A",
+    "status": "SR_LINKED",
+    "required_parts": "",
+    "sm_id": "6686",
+    "current_kms": 1184820
+  },
+  "repair_items": []
+}
+================================================================================
+[2026-03-26T12:21:56.530Z] Garage Module API - RO 2295 and their defects/SMs {"2295":{"defects":["6686"],"sm":[]}} updated successfully
+Skipping - Invalid SM Id and RO id combination. SM 6686 is not assigned to RO 2295
+{
+  "userId": 211,
+  "source": "Garage Webhook",
+  "path": "/updateVehicleDefect_v2",
+  "method": "POST"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+{
+  "2295": [
+    {
+      "repair_log_id": 6686,
+      "scheduled_maintenance_setting_id": 5,
+      "rpor_status": "In_Progress",
+      "invoice_status": null,
+      "labor_cost": null,
+      "parts_cost": null,
+      "total_cost": null,
+      "current_kms": "1184820.00",
+      "service_completion_date": "2026-03-24T04:00:00.000Z",
+      "work_order_number": "WO-2026-031",
+      "work_order_status": "Open",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- New Value ----------------------------------------
+{
+  "2295": [
+    {
+      "repair_log_id": 6686,
+      "scheduled_maintenance_setting_id": 5,
+      "rpor_status": "Repair_Started",
+      "invoice_status": null,
+      "labor_cost": null,
+      "parts_cost": null,
+      "total_cost": null,
+      "current_kms": "1184820.00",
+      "service_completion_date": "2026-03-24T04:00:00.000Z",
+      "work_order_number": "WO-2026-031",
+      "work_order_status": "In_Progress",
+      "invoice_number": null,
+      "invoice_amount": null
+    }
+  ]
+}
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+{
+  "roid": 2295,
+  "defectid": "6686",
+  "sm_id": "6686",
+  "work_order_number": "WO-2026-031",
+  "work_order_status": "In_Progress",
+  "completion_date": "",
+  "invoice_status": "",
+  "vehicle_status": "In_Bay",
+  "invoice_number": "",
+  "current_kms": "",
+  "service_completion_date": "",
+  "invoice_amount": "",
+  "invoice_url": "",
+  "defects_details": {
+    "defect_id": "6686",
+    "name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT",
+    "external_ro_id": 2295,
+    "external_type": "Defect",
+    "external_defect_id": "6686",
+    "description": "Scheduled Maintenance",
+    "created_date": "March 23, 2026",
+    "repair_items": "Diagnostic",
+    "status": "SR_STARTED",
+    "required_parts": "",
+    "sm_id": "6686"
+  },
+  "repair_items": [
+    {
+      "work_order_repair_item_id": 119,
+      "manager_notes": null,
+      "manager_notes_by": null,
+      "manager_notes_at": null,
+      "admin_notes": null,
+      "admin_notes_by": null,
+      "admin_notes_at": null,
+      "rejection_reasons": null,
+      "repair_item_id": 48,
+      "defect_id": "6686",
+      "defect_name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT",
+      "defect_description": "Scheduled Maintenance",
+      "defect_status": "In_Progress",
+      "repair_name": "Diagnostic",
+      "description": "Standard Diagnostic",
+      "estimated_hours": 1,
+      "is_scheduled_maintenance": false,
+      "is_custom": true,
+      "status": "Pending",
+      "labor_cost": 45,
+      "work_description": "Standard Diagnostic procedure",
+      "shop_supplies": false,
+      "current_assignment_status": "In_Progress",
+      "work_orders": {
+        "work_order_id": 33,
+        "work_order_number": "WO-2026-031",
+        "customer_id": 1,
+        "vehicle_id": 3,
+        "visit_id": 4,
+        "ro_id": 2295,
+        "customer_ro_number": "2295",
+        "parent_work_order_number": null,
+        "transferred_at": null,
+        "requested_by": "Esmail",
+        "current_kms": 7849203,
+        "status": "In_Progress",
+        "priority": "Medium",
+        "invoice_status": "Not_Invoiced",
+        "estimated_completion": "2026-03-26T12:20:56.000Z",
+        "created_at": "2026-03-23T10:53:49.000Z",
+        "updated_at": "2026-03-23T10:53:49.000Z",
+        "locked_at": "2026-03-26T12:21:42.381Z",
+        "locked_by_user_id": 1,
+        "deleted": false,
+        "vehicle_status": "In_Bay",
+        "stop_reason": null,
+        "current_kms_history": [
+          {
+            "kms": 1184820,
+            "createdAt": "2026-03-23T10:53:49.273Z",
+            "defect_id": 97,
+            "current_kms": 1184820,
+            "defect_name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT"
+          },
+          {
+            "kms": 7849203,
+            "createdAt": "2026-03-26T12:21:55.667Z",
+            "defect_id": 97,
+            "repair_id": 119,
+            "defect_name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT",
+            "mechanic_id": 1,
+            "repair_name": "Diagnostic",
+            "mechanic_name": "John Mechanic"
+          },
+          {
+            "kms": 7849203,
+            "createdAt": "2026-03-26T12:21:55.686Z",
+            "defect_id": 97,
+            "repair_id": 119,
+            "defect_name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT",
+            "mechanic_id": 1,
+            "repair_name": "Diagnostic",
+            "mechanic_name": "John Mechanic"
+          }
+        ],
+        "is_quick_job": false,
+        "customers": {
+          "customer_id": 1,
+          "name": "Skyway Coach Lines",
+          "contact_person": "Mohamed Esmail",
+          "email": "mel@dev.vto.group",
+          "phone": "(786) 392-0348",
+          "address": "2839 Saint Rose Parkway",
+          "city": "Coachella",
+          "state": "New York",
+          "postal_code": "64733940",
+          "created_at": "2026-02-13T05:04:45.000Z",
+          "updated_at": "2026-02-13T05:04:45.000Z",
+          "contact_phone": "",
+          "contact_email": "",
+          "ar_contact": "",
+          "ar_phone": "",
+          "ar_email": "",
+          "due_days": 45,
+          "external_id": null
+        },
+        "vehicles": {
+          "vehicle_id": 3,
+          "customer_id": 1,
+          "vehicle_type_id": 3,
+          "year": 1980,
+          "make": "PREVOST",
+          "model": "H3 Passenger Coach",
+          "trim": "Lariant",
+          "vin": "1FD7W2AT2DE729135",
+          "unit_number": "9611",
+          "status": "In_Service",
+          "created_at": "2026-03-23T10:43:56.000Z",
+          "updated_at": "2026-03-23T10:43:56.000Z",
+          "verified": false
+        },
+        "invoices": [],
+        "defects": [
+          {
+            "defect_id": 97,
+            "work_order_id": 33,
+            "vehicle_id": 3,
+            "name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT",
+            "description": "Scheduled Maintenance",
+            "status": "In_Progress",
+            "disengage_reason": null,
+            "disengage_notes": null,
+            "disengaged_at": null,
+            "created_at": "2026-03-23T10:53:49.000Z",
+            "updated_at": "2026-03-23T10:53:49.000Z",
+            "external_ro_id": 2295,
+            "external_defect_id": "6686",
+            "external_type": "Defect"
+          },
+          {
+            "defect_id": 107,
+            "work_order_id": 33,
+            "vehicle_id": 3,
+            "name": "Coolant replacment - Coolant",
+            "description": "Coolant replacment - Coolant",
+            "status": "Scheduled",
+            "disengage_reason": null,
+            "disengage_notes": null,
+            "disengaged_at": null,
+            "created_at": "2026-03-26T12:21:11.000Z",
+            "updated_at": "2026-03-26T12:21:11.000Z",
+            "external_ro_id": null,
+            "external_defect_id": null,
+            "external_type": null
+          }
+        ],
+        "work_order_repair_items": [
+          {
+            "work_order_repair_item_id": 119,
+            "rejection_reasons": null,
+            "work_order_id": 33,
+            "repair_item_id": 48,
+            "defect_id": 97,
+            "created_at": "2026-03-26T12:21:03.000Z",
+            "updated_at": "2026-03-26T12:21:03.000Z",
+            "status": "Pending",
+            "rejection_reason": null,
+            "admin_notes": null,
+            "admin_notes_by": null,
+            "admin_notes_at": null,
+            "manager_notes": null,
+            "manager_notes_by": null,
+            "manager_notes_at": null,
+            "shop_supplies": false,
+            "repair_items": {
+              "repair_item_id": 48,
+              "name": "Diagnostic",
+              "description": "Standard Diagnostic",
+              "estimated_hours": "1",
+              "labor_cost": "0",
+              "has_parts": false,
+              "work_description": "Standard Diagnostic procedure",
+              "total_estimated_cost": "0",
+              "is_active": true,
+              "is_custom": true,
+              "created_at": "2026-03-26T12:21:03.000Z",
+              "updated_at": "2026-03-26T12:21:03.000Z",
+              "fixed_amount": null,
+              "is_scheduled_maintenance": false,
+              "repair_item_parts": []
+            },
+            "defects": {
+              "defect_id": 97,
+              "work_order_id": 33,
+              "vehicle_id": 3,
+              "name": "Semi-Annual Inspection Sticker | Due Date: 2025-03-22 - SCHEDULED MAINTENANCE DEFECT",
+              "description": "Scheduled Maintenance",
+              "status": "In_Progress",
+              "disengage_reason": null,
+              "disengage_notes": null,
+              "disengaged_at": null,
+              "created_at": "2026-03-23T10:53:49.000Z",
+              "updated_at": "2026-03-23T10:53:49.000Z",
+              "external_ro_id": 2295,
+              "external_defect_id": "6686",
+              "external_type": "Defect"
+            },
+            "mechanic_assignments": [
+              {
+                "assignment_id": 117,
+                "work_order_repair_item_id": 119,
+                "defect_id": null,
+                "mechanic_id": 1,
+                "bay_id": 1,
+                "start_datetime": "2026-03-26T04:30:00.000Z",
+                "end_datetime": "2026-03-26T05:30:00.000Z",
+                "actual_start_datetime": "2026-03-26T12:21:56.000Z",
+                "actual_end_datetime": null,
+                "status": "In_Progress",
+                "notes": null,
+                "created_at": "2026-03-26T12:21:30.000Z",
+                "updated_at": "2026-03-26T12:21:30.000Z",
+                "reject_reason": null,
+                "approval_status": "Not_Submitted",
+                "hours": "0",
+                "invoice_notes": null,
+                "mechanic_challenge_notes": null,
+                "pause_time": null,
+                "paused_time": null,
+                "actual_hours": null,
+                "assignment_history": [
+                  {
+                    "end": null,
+                    "start": "2026-03-26T12:21:55.749Z"
+                  }
+                ],
+                "is_completed": false,
+                "time_tracking_history": [
+                  {
+                    "time": "2026-03-26T12:21:55.749Z",
+                    "status": "Started"
+                  }
+                ],
+                "approval_timestamp": null,
+                "mechanics": {
+                  "mechanic_id": 1,
+                  "name": "John Mechanic",
+                  "employee_id": "M001",
+                  "contact_number": "123-456-7890",
+                  "efficiency_rating": "100",
+                  "status": "Working",
+                  "qr_code_path": null,
+                  "user_id": 3,
+                  "created_at": "2026-02-12T09:06:44.000Z",
+                  "updated_at": "2026-02-12T09:06:44.000Z",
+                  "type": "Mechanic"
+                },
+                "repair_bays": {
+                  "bay_id": 1,
+                  "bay_number": "1",
+                  "bay_name": "BAY 1",
+                  "description": "",
+                  "status": "Available",
+                  "created_at": "2026-02-13T07:10:20.000Z",
+                  "updated_at": "2026-02-13T07:10:20.000Z"
+                }
+              }
+            ],
+            "repair_item_notes": []
+          },
+          {
+            "work_order_repair_item_id": 120,
+            "rejection_reasons": null,
+            "work_order_id": 33,
+            "repair_item_id": 10,
+            "defect_id": 107,
+            "created_at": "2026-03-26T12:21:16.000Z",
+            "updated_at": "2026-03-26T12:21:16.000Z",
+            "status": "Pending",
+            "rejection_reason": null,
+            "admin_notes": null,
+            "admin_notes_by": null,
+            "admin_notes_at": null,
+            "manager_notes": null,
+            "manager_notes_by": null,
+            "manager_notes_at": null,
+            "shop_supplies": false,
+            "repair_items": {
+              "repair_item_id": 10,
+              "name": "Oil filter change",
+              "description": "",
+              "estimated_hours": "2",
+              "labor_cost": "45",
+              "has_parts": false,
+              "work_description": "",
+              "total_estimated_cost": "339.78",
+              "is_active": true,
+              "is_custom": false,
+              "created_at": "2026-02-13T07:16:20.000Z",
+              "updated_at": "2026-02-13T07:16:20.000Z",
+              "fixed_amount": null,
+              "is_scheduled_maintenance": false,
+              "repair_item_parts": [
+                {
+                  "repair_item_id": 10,
+                  "inventory_id": "01KFZMFZ3N14DC16MMKRXTJD7N",
+                  "quantity": "1",
+                  "serial_number": "",
+                  "is_required": true,
+                  "created_at": "2026-02-13T07:16:20.000Z"
+                },
+                {
+                  "repair_item_id": 10,
+                  "inventory_id": "01KFZMFZVS6WCDTQJ5WCE9NRYP",
+                  "quantity": "1",
+                  "serial_number": "",
+                  "is_required": true,
+                  "created_at": "2026-02-13T07:16:20.000Z"
+                },
+                {
+                  "repair_item_id": 10,
+                  "inventory_id": "01KFZMFZZDXR8M65QCSAJNDRTP",
+                  "quantity": "1",
+                  "serial_number": "",
+                  "is_required": true,
+                  "created_at": "2026-02-13T07:16:20.000Z"
+                }
+              ]
+            },
+            "defects": {
+              "defect_id": 107,
+              "work_order_id": 33,
+              "vehicle_id": 3,
+              "name": "Coolant replacment - Coolant",
+              "description": "Coolant replacment - Coolant",
+              "status": "Scheduled",
+              "disengage_reason": null,
+              "disengage_notes": null,
+              "disengaged_at": null,
+              "created_at": "2026-03-26T12:21:11.000Z",
+              "updated_at": "2026-03-26T12:21:11.000Z",
+              "external_ro_id": null,
+              "external_defect_id": null,
+              "external_type": null
+            },
+            "mechanic_assignments": [
+              {
+                "assignment_id": 118,
+                "work_order_repair_item_id": 120,
+                "defect_id": null,
+                "mechanic_id": 1,
+                "bay_id": 3,
+                "start_datetime": "2026-03-26T05:45:00.000Z",
+                "end_datetime": "2026-03-26T07:45:00.000Z",
+                "actual_start_datetime": null,
+                "actual_end_datetime": null,
+                "status": "Scheduled",
+                "notes": null,
+                "created_at": "2026-03-26T12:21:38.000Z",
+                "updated_at": "2026-03-26T12:21:38.000Z",
+                "reject_reason": null,
+                "approval_status": "Not_Submitted",
+                "hours": "0",
+                "invoice_notes": null,
+                "mechanic_challenge_notes": null,
+                "pause_time": null,
+                "paused_time": null,
+                "actual_hours": null,
+                "assignment_history": null,
+                "is_completed": false,
+                "time_tracking_history": null,
+                "approval_timestamp": null,
+                "mechanics": {
+                  "mechanic_id": 1,
+                  "name": "John Mechanic",
+                  "employee_id": "M001",
+                  "contact_number": "123-456-7890",
+                  "efficiency_rating": "100",
+                  "status": "Working",
+                  "qr_code_path": null,
+                  "user_id": 3,
+                  "created_at": "2026-02-12T09:06:44.000Z",
+                  "updated_at": "2026-02-12T09:06:44.000Z",
+                  "type": "Mechanic"
+                },
+                "repair_bays": {
+                  "bay_id": 3,
+                  "bay_number": "3",
+                  "bay_name": "ES BAY",
+                  "description": "",
+                  "status": "Available",
+                  "created_at": "2026-02-13T07:10:42.000Z",
+                  "updated_at": "2026-02-13T07:10:42.000Z"
+                }
+              }
+            ],
+            "repair_item_notes": []
+          }
+        ],
+        "work_order_parts_used": [
+          {
+            "work_order_parts_used_id": 210,
+            "work_order_id": 33,
+            "work_order_repair_item_id": 120,
+            "defect_id": null,
+            "inventory_id": "01KFZMFZZDXR8M65QCSAJNDRTP",
+            "quantity": "1",
+            "serial_number": null,
+            "unit_price": "188.57",
+            "total_price": "188.57",
+            "status": "Available",
+            "notes": null,
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-26T12:21:16.000Z",
+            "updated_at": "2026-03-26T12:21:16.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": false,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 120,
+              "work_order_id": 33,
+              "repair_item_id": 10,
+              "defect_id": 107,
+              "created_at": "2026-03-26T12:21:16.000Z",
+              "updated_at": "2026-03-26T12:21:16.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 10,
+                "name": "Oil filter change",
+                "description": "",
+                "estimated_hours": "2",
+                "labor_cost": "45",
+                "has_parts": false,
+                "work_description": "",
+                "total_estimated_cost": "339.78",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-02-13T07:16:20.000Z",
+                "updated_at": "2026-02-13T07:16:20.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 208,
+            "work_order_id": 33,
+            "work_order_repair_item_id": 120,
+            "defect_id": null,
+            "inventory_id": "01KFZMFZ3N14DC16MMKRXTJD7N",
+            "quantity": "1",
+            "serial_number": null,
+            "unit_price": "32.8",
+            "total_price": "32.8",
+            "status": "Not_in_stock",
+            "notes": null,
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-26T12:21:16.000Z",
+            "updated_at": "2026-03-26T12:21:16.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": false,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 120,
+              "work_order_id": 33,
+              "repair_item_id": 10,
+              "defect_id": 107,
+              "created_at": "2026-03-26T12:21:16.000Z",
+              "updated_at": "2026-03-26T12:21:16.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 10,
+                "name": "Oil filter change",
+                "description": "",
+                "estimated_hours": "2",
+                "labor_cost": "45",
+                "has_parts": false,
+                "work_description": "",
+                "total_estimated_cost": "339.78",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-02-13T07:16:20.000Z",
+                "updated_at": "2026-02-13T07:16:20.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          },
+          {
+            "work_order_parts_used_id": 209,
+            "work_order_id": 33,
+            "work_order_repair_item_id": 120,
+            "defect_id": null,
+            "inventory_id": "01KFZMFZVS6WCDTQJ5WCE9NRYP",
+            "quantity": "1",
+            "serial_number": null,
+            "unit_price": "28.41",
+            "total_price": "28.41",
+            "status": "Not_in_stock",
+            "notes": null,
+            "requested_by": 1,
+            "approved_by": null,
+            "approved_at": null,
+            "rejection_reason": null,
+            "created_at": "2026-03-26T12:21:16.000Z",
+            "updated_at": "2026-03-26T12:21:16.000Z",
+            "non_inventory_part_description": null,
+            "non_inventory_part_name": null,
+            "type": "inventory",
+            "additional_part": false,
+            "rejection_qty": null,
+            "added_after_approval": false,
+            "work_order_repair_items": {
+              "work_order_repair_item_id": 120,
+              "work_order_id": 33,
+              "repair_item_id": 10,
+              "defect_id": 107,
+              "created_at": "2026-03-26T12:21:16.000Z",
+              "updated_at": "2026-03-26T12:21:16.000Z",
+              "rejection_reason": null,
+              "status": "Pending",
+              "rejection_reasons": null,
+              "admin_notes": null,
+              "manager_notes": null,
+              "admin_notes_at": null,
+              "admin_notes_by": null,
+              "manager_notes_at": null,
+              "manager_notes_by": null,
+              "shop_supplies": false,
+              "is_supplementary": false,
+              "repair_items": {
+                "repair_item_id": 10,
+                "name": "Oil filter change",
+                "description": "",
+                "estimated_hours": "2",
+                "labor_cost": "45",
+                "has_parts": false,
+                "work_description": "",
+                "total_estimated_cost": "339.78",
+                "is_active": true,
+                "is_custom": false,
+                "created_at": "2026-02-13T07:16:20.000Z",
+                "updated_at": "2026-02-13T07:16:20.000Z",
+                "fixed_amount": null,
+                "is_scheduled_maintenance": false
+              }
+            }
+          }
+        ]
+      },
+      "total_actual_hours": 0,
+      "mechanic_assignments": [
+        {
+          "assignment_id": 117,
+          "work_order_repair_item_id": 119,
+          "defect_id": null,
+          "mechanic_id": 1,
+          "bay_id": 1,
+          "start_datetime": "2026-03-26T04:30:00.000Z",
+          "end_datetime": "2026-03-26T05:30:00.000Z",
+          "actual_start_datetime": "2026-03-26T12:21:56.000Z",
+          "actual_end_datetime": null,
+          "status": "In_Progress",
+          "notes": null,
+          "created_at": "2026-03-26T12:21:30.000Z",
+          "updated_at": "2026-03-26T12:21:30.000Z",
+          "reject_reason": null,
+          "approval_status": "Not_Submitted",
+          "hours": "0",
+          "invoice_notes": null,
+          "mechanic_challenge_notes": null,
+          "pause_time": null,
+          "paused_time": null,
+          "actual_hours": null,
+          "assignment_history": [
+            {
+              "end": null,
+              "start": "2026-03-26T12:21:55.749Z"
+            }
+          ],
+          "is_completed": false,
+          "time_tracking_history": [
+            {
+              "time": "2026-03-26T12:21:55.749Z",
+              "status": "Started"
+            }
+          ],
+          "approval_timestamp": null
+        }
+      ],
+      "required_parts": "",
+      "repair_item_parts": [],
+      "notes": [],
+      "total_estimated_cost": 0,
+      "sm_id": "6686"
+    }
+  ]
+}
+================================================================================
+[2026-03-26T12:42:31.217Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:42:33.521Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:42:33.971Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:42:34.516Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:43:04.170Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:43:05.025Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:43:13.962Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:43:14.529Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:43:55.401Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
+[2026-03-26T12:43:56.456Z] Vehicle Latest Km API Called for vehicle 9611
+{
+  "userId": 295,
+  "source": "Garage Webhook",
+  "path": "/vehicleLatestkm",
+  "method": "GET"
+}
+
+---------------------------------------- Old Value ----------------------------------------
+(no data)
+
+---------------------------------------- New Value ----------------------------------------
+(no data)
+
+---------------------------------------- Raw Log from Garage ----------------------------------------
+(no raw data)
+================================================================================
